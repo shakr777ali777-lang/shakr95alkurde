@@ -4,60 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
+    <!-- كود إثبات ملكية جوجل لشاكر الكردي -->
     <meta name="google-site-verification" content="google2c03c10697eff070" />
 
+    <!-- أوسمة المعاينة (تظهر صورتك الشخصية خارج الموقع) -->
     <meta property="og:title" content="منصة شاكر الكردي | عروض الربح والخصومات">
-    <meta property="og:description" content="بوابتك لأقوى عروض الربح والتسوق المجاني الحصرية، تيمو، وتداول العملات.">
-    <meta property="og:image" content="IMG_3298.jpeg"> <meta property="og:url" content="https://yourdomain.com"> <meta property="og:type" content="website">
+    <meta property="og:description" content="بوابتك لأقوى عروض الربح والتسوق المجاني الحصرية.">
+    <meta property="og:image" content="IMG_3298.jpeg">
+    <meta property="og:type" content="website">
 
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="IMG_3298.jpeg">
-
-    <title>منصة شاكر الكردي | عروض الربح والخصومات</title>
+    <title>شــاكر الكــردي | المنصة الرسمية</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary-color: #ff4d4d;
-            --secondary-color: #f97316;
+            --gold-primary: #bf953f;
+            --gold-light: #fcf6ba;
+            --gold-dark: #b38728;
             --bg-dark: #0f172a;
             --card-bg: #1e293b;
             --text-light: #f8fafc;
             --accent-gradient: linear-gradient(135deg, #ff4d4d 0%, #f97316 100%);
         }
+
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
         body { background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; overflow-x: hidden; }
-        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, rgba(249, 115, 22, 0.1) 0%, transparent 50%); z-index: -1; }
-        header { padding: 4rem 2rem; text-align: center; background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(255, 255, 255, 0.1); margin-bottom: 3rem; }
-        header h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; background: var(--accent-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        header p { font-size: 1.2rem; color: #94a3b8; max-width: 600px; margin: 0 auto; }
+
+        .bg-glow { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 50% 50%, rgba(184, 134, 11, 0.1) 0%, transparent 50%); z-index: -1; }
+
+        header { padding: 5rem 2rem; text-align: center; background: rgba(30, 41, 59, 0.6); backdrop-filter: blur(15px); border-bottom: 2px solid var(--gold-dark); margin-bottom: 3rem; }
+
+        /* الاسم الذهبي الفخم */
+        .premium-name {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 900;
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            filter: drop-shadow(0px 5px 15px rgba(184, 134, 11, 0.4));
+            animation: shine 4s infinite linear;
+            background-size: 200% auto;
+            letter-spacing: -1px;
+        }
+
+        @keyframes shine { to { background-position: 200% center; } }
+
+        .name-underline { width: 80px; height: 4px; background: linear-gradient(to right, #bf953f, #fcf6ba); margin: 15px auto; border-radius: 10px; box-shadow: 0 0 20px rgba(184, 134, 11, 0.6); }
+
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem 5rem; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2.5rem; }
-        .card { background: var(--card-bg); border-radius: 20px; overflow: hidden; transition: all 0.4s ease; border: 1px solid rgba(255, 255, 255, 0.05); text-decoration: none; display: block; }
-        .card:hover { transform: translateY(-10px); border-color: var(--primary-color); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
+
+        .card { background: var(--card-bg); border-radius: 25px; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 1px solid rgba(255, 255, 255, 0.05); text-decoration: none; display: block; }
+        .card:hover { transform: translateY(-15px); border-color: var(--gold-primary); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5); }
+
         .card-image { width: 100%; height: 230px; background-size: cover; background-position: center; position: relative; }
         .card-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.9)); }
-        .card-content { padding: 1.5rem; }
-        .card-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-light); text-align: center; }
-        .btn { display: block; padding: 0.8rem; background: var(--accent-gradient); color: white; border-radius: 12px; font-weight: 600; text-align: center; margin-top: 10px; }
-        footer { text-align: center; padding: 3rem; border-top: 1px solid rgba(255, 255, 255, 0.1); color: #64748b; }
-        @media (max-width: 768px) { header h1 { font-size: 2.2rem; } .grid { grid-template-columns: 1fr; } }
+
+        .card-content { padding: 1.8rem; text-align: center; }
+        .card-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-light); }
+
+        .btn { display: block; padding: 0.9rem; background: var(--accent-gradient); color: white; border-radius: 15px; font-weight: 700; transition: 0.3s; }
+        .card:hover .btn { transform: scale(1.05); box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3); }
+
+        footer { text-align: center; padding: 4rem; border-top: 1px solid rgba(255, 255, 255, 0.1); color: #64748b; font-size: 0.9rem; }
     </style>
 </head>
 <body>
     <div class="bg-glow"></div>
+    
     <header>
-        <h1>منصة شاكر الكردي</h1>
-        <p>بوابتك لأقوى عروض الربح والتسوق المجاني الحصرية.</p>
+        <h1 class="premium-name">شــاكر الكــردي</h1>
+        <div class="name-underline"></div>
+        <p style="color: #94a3b8; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">بوابتك لأقوى عروض الربح والتسوق المجاني الحصرية.</p>
     </header>
 
     <div class="container">
         <div class="grid">
             
-            <a href="https://temu.to/k/epv72au60x4" class="card" target="_blank" rel="noopener noreferrer">
+            <!-- تيمو -->
+            <a href="https://temu.to/k/epv72au60x4" class="card" target="_blank" rel="noopener">
                 <div class="card-image" style="background-image: url('IMG_3288.jpeg');">
                     <div class="card-overlay"></div>
                 </div>
@@ -67,33 +96,25 @@
                 </div>
             </a>
 
-            <a href="https://os8.me/7zkGST" class="card" target="_blank" rel="noopener noreferrer">
+            <!-- ربح 100$ -->
+            <a href="https://os8.me/7zkGST" class="card" target="_blank" rel="noopener">
                 <div class="card-image" style="background-image: url('IMG_3253.jpeg');">
                     <div class="card-overlay"></div>
                 </div>
                 <div class="card-content">
                     <h2 class="card-title">رابط ربح 100$</h2>
-                    <div class="btn">اضغط هنا للربح</div>
-                </div>
-            </a>
-
-            <a href="https://os8.me/3MWHRz" class="card" target="_blank" rel="noopener noreferrer">
-                <div class="card-image" style="background-image: url('IMG_3273.jpeg');">
-                    <div class="card-overlay"></div>
-                </div>
-                <div class="card-content">
-                    <h2 class="card-title">اربح 100$ بأقل من ساعة</h2>
                     <div class="btn">ابدأ الربح الآن</div>
                 </div>
             </a>
 
-            <a href="https://pocket-friends.co/r/el2lqoq26c" class="card" target="_blank" rel="noopener noreferrer">
+            <!-- التداول -->
+            <a href="https://pocket-friends.co/r/el2lqoq26c" class="card" target="_blank" rel="noopener">
                 <div class="card-image" style="background-image: url('IMG_3293.jpeg');">
                     <div class="card-overlay"></div>
                 </div>
                 <div class="card-content">
-                    <h2 class="card-title">إيداع بونص 100% | أودع $100 واحصل على $100 إضافية</h2>
-                    <div class="btn">ابدأ التداول الآن</div>
+                    <h2 class="card-title">بونص إيداع 100% | تداول الآن</h2>
+                    <div class="btn">احصل على البونص</div>
                 </div>
             </a>
 
@@ -106,7 +127,6 @@
 </body>
 </html>
 
-</html>
 
 
 
