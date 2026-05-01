@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="google2c03c10697eff070" />
 
-    <!-- صورة المعاينة -->
+    <!-- صورة المعاينة لخارج الموقع -->
     <meta property="og:title" content="منصة شاكر الكردي | عروض الربح والخصومات">
     <meta property="og:description" content="بوابتك لأقوى عروض الربح والتسوق المجاني الحصرية.">
     <meta property="og:image" content="IMG_3298.jpeg">
@@ -13,8 +13,6 @@
 
     <title>شــاكر الكــردي | المنصة الرسمية</title>
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
@@ -23,16 +21,16 @@
             --gold-light: #fcf6ba;
             --gold-dark: #b38728;
             --bg-dark: #0f172a;
-            --card-bg: rgba(30, 41, 59, 0.9);
+            --card-bg: rgba(30, 41, 59, 0.85);
             --text-light: #f8fafc;
             --accent-gradient: linear-gradient(135deg, #ff4d4d 0%, #f97316 100%);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-        body { background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; overflow-x: hidden; position: relative; }
+        body { background-color: var(--bg-dark); color: var(--text-light); overflow-x: hidden; position: relative; min-height: 100vh; }
 
-        /* تأثير الدولارات المتساقطة */
-        .money-rain {
+        /* تأثير الدولارات المتساقطة (CSS ONLY) */
+        .money-container {
             position: fixed;
             top: 0;
             left: 0;
@@ -40,27 +38,36 @@
             height: 100%;
             z-index: -1;
             pointer-events: none;
-            overflow: hidden;
-            opacity: 0.15; /* تعتيم خفيف للدولارات */
+            opacity: 0.2; /* تعتيم خفيف جداً لعدم تشتيت الزائر */
         }
 
-        .dollar {
+        .dollar-rain {
             position: absolute;
+            top: -50px;
             color: #22c55e;
-            font-size: 2rem;
-            user-select: none;
+            font-size: 24px;
+            font-weight: bold;
             animation: fall linear infinite;
         }
 
         @keyframes fall {
-            0% { transform: translateY(-10vh) rotate(0deg); opacity: 0; }
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
             10% { opacity: 1; }
             90% { opacity: 1; }
             100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
         }
 
-        /* تنسيق الهيدر الفخم */
-        header { padding: 5rem 2rem; text-align: center; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(10px); border-bottom: 2px solid var(--gold-dark); margin-bottom: 3rem; position: relative; z-index: 10; }
+        /* توزيع الدولارات بشكل عشوائي */
+        .dollar-rain:nth-child(1) { left: 10%; animation-duration: 5s; animation-delay: 0s; }
+        .dollar-rain:nth-child(2) { left: 25%; animation-duration: 7s; animation-delay: 2s; }
+        .dollar-rain:nth-child(3) { left: 40%; animation-duration: 6s; animation-delay: 1s; }
+        .dollar-rain:nth-child(4) { left: 55%; animation-duration: 8s; animation-delay: 3s; }
+        .dollar-rain:nth-child(5) { left: 70%; animation-duration: 5s; animation-delay: 0.5s; }
+        .dollar-rain:nth-child(6) { left: 85%; animation-duration: 9s; animation-delay: 4s; }
+        .dollar-rain:nth-child(7) { left: 95%; animation-duration: 6s; animation-delay: 2.5s; }
+
+        /* الهيدر الذهبي الفخم */
+        header { padding: 5rem 2rem; text-align: center; background: rgba(15, 23, 42, 0.6); backdrop-filter: blur(10px); border-bottom: 2px solid var(--gold-dark); margin-bottom: 3rem; }
 
         .premium-name {
             font-size: clamp(2.5rem, 8vw, 4rem);
@@ -77,24 +84,33 @@
         @keyframes shine { to { background-position: 200% center; } }
         .name-underline { width: 80px; height: 4px; background: linear-gradient(to right, #bf953f, #fcf6ba); margin: 15px auto; border-radius: 10px; }
 
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem 5rem; position: relative; z-index: 10; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem 5rem; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2.5rem; }
 
-        .card { background: var(--card-bg); border-radius: 25px; overflow: hidden; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 1px solid rgba(255, 255, 255, 0.05); text-decoration: none; display: block; backdrop-filter: blur(5px); }
-        .card:hover { transform: translateY(-15px); border-color: var(--gold-primary); box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6); }
+        .card { background: var(--card-bg); border-radius: 25px; overflow: hidden; transition: 0.4s; border: 1px solid rgba(255, 255, 255, 0.05); text-decoration: none; display: block; backdrop-filter: blur(10px); }
+        .card:hover { transform: translateY(-10px); border-color: var(--gold-primary); }
 
-        .card-image { width: 100%; height: 230px; background-size: cover; background-position: center; position: relative; }
+        .card-image { width: 100%; height: 230px; background-size: cover; background-position: center; }
         .card-content { padding: 1.8rem; text-align: center; }
         .card-title { font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-light); }
 
-        .btn { display: block; padding: 0.9rem; background: var(--accent-gradient); color: white; border-radius: 15px; font-weight: 700; transition: 0.3s; }
+        .btn { display: block; padding: 0.9rem; background: var(--accent-gradient); color: white; border-radius: 15px; font-weight: 700; }
 
-        footer { text-align: center; padding: 4rem; border-top: 1px solid rgba(255, 255, 255, 0.1); color: #64748b; position: relative; z-index: 10; }
+        footer { text-align: center; padding: 4rem; color: #64748b; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-    <!-- طبقة الدولارات المتساقطة -->
-    <div class="money-rain" id="moneyRain"></div>
+    <!-- خلفية الدولارات المتساقطة -->
+    <div class="money-container">
+        <div class="dollar-rain">$</div>
+        <div class="dollar-rain">$</div>
+        <div class="dollar-rain">$</div>
+        <div class="dollar-rain">$</div>
+        <div class="dollar-rain">$</div>
+        <div class="dollar-rain">$</div>
+        <div class="dollar-rain">$</div>
+        <div class="dollar-rain">$</div>
+    </div>
 
     <header>
         <h1 class="premium-name">شــاكر الكــردي</h1>
@@ -113,7 +129,7 @@
                 </div>
             </a>
 
-            <!-- الرابط المحدث Make Money -->
+            <!-- الرابط الجديد المحدث -->
             <a href="https://os8.me/QprbQS" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3253.jpeg');"></div>
                 <div class="card-content">
@@ -122,7 +138,7 @@
                 </div>
             </a>
 
-            <!-- الربح السريع -->
+            <!-- الربح الثاني -->
             <a href="https://os8.me/3MWHRz" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3273.jpeg');"></div>
                 <div class="card-content">
@@ -143,31 +159,7 @@
     </div>
 
     <footer>
-        <p>جميع الحقوق محفوظة &copy; 2026 | شاکر أيمن علي (شاكر الكردي)</p>
+        <p>جميع الحقوق محفوظة &copy; 2026 | شاكر الكردي</p>
     </footer>
-
-    <script>
-        // كود لتوليد الدولارات بشكل عشوائي
-        const moneyContainer = document.getElementById('moneyRain');
-        const currency = ['$'];
-        
-        function createDollar() {
-            const dollar = document.createElement('div');
-            dollar.innerText = currency[0];
-            dollar.classList.add('dollar');
-            
-            dollar.style.left = Math.random() * 100 + 'vw';
-            dollar.style.animationDuration = Math.random() * 3 + 2 + 's'; 
-            dollar.style.fontSize = Math.random() * 20 + 15 + 'px';
-            
-            moneyContainer.appendChild(dollar);
-            
-            setTimeout(() => {
-                dollar.remove();
-            }, 5000);
-        }
-
-        setInterval(createDollar, 200); // سرعة تساقط الدولارات
-    </script>
 </body>
 </html>
