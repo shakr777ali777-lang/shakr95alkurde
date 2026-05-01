@@ -192,10 +192,18 @@
                 </div>
             </a>
 
-            <!-- برنامج 2 -->
-            <a href="رابط_البرنامج_هنا" class="card" target="_blank">
-                <div class="card-image img-2">
+            <!-- برنامج 2 -->            <!-- بطاقة: قم بتنزيل وربح 100$ -->
+            <a href="https://os8.me/7zkGST" class="card" target="_blank">
+                <div class="card-image" style="background-image: url('IMG_3253.jpeg');">
                     <div class="card-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">قم بتنزيل وربح 100$</h2>
+                    <p class="card-description">سجل الآن للحصول على مكافأة نقدية تبدأ من 8$ وتصل إلى 100$ عبر برنامج المكافآت الحصري.</p>
+                    <div class="btn">احصل على الجائزة الآن</div>
+                </div>
+            </a>
+
                 </div>
                 <div class="card-content">
                     <h2 class="card-title">اسم البرنامج الثاني</h2>
