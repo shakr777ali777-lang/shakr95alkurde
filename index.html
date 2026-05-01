@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة شاكر الكردي | تحميل أفضل البرامج</title>
+    <title>منصة شاكر الكردي | تحميل البرامج</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
@@ -24,14 +24,14 @@
         header p { font-size: 1.2rem; color: #94a3b8; max-width: 600px; margin: 0 auto; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem 5rem; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2.5rem; }
-        .card { background: var(--card-bg); border-radius: 20px; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 1px solid rgba(255, 255, 255, 0.05); position: relative; cursor: pointer; text-decoration: none; display: block; }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); border-color: var(--primary-color); }
-        .card-image { width: 100%; height: 250px; background-size: cover; background-position: center; position: relative; }
+        .card { background: var(--card-bg); border-radius: 20px; overflow: hidden; transition: all 0.4s ease; border: 1px solid rgba(255, 255, 255, 0.05); text-decoration: none; display: block; }
+        .card:hover { transform: translateY(-10px); border-color: var(--primary-color); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
+        .card-image { width: 100%; height: 200px; background-size: cover; background-position: center; position: relative; }
         .card-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.9)); }
-        .card-content { padding: 1.5rem; position: relative; }
+        .card-content { padding: 1.5rem; }
         .card-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--text-light); }
-        .card-description { font-size: 0.95rem; color: #94a3b8; margin-bottom: 1.5rem; }
-        .btn { display: inline-block; padding: 0.8rem 1.5rem; background: var(--accent-gradient); color: white; border-radius: 12px; font-weight: 600; text-align: center; width: 100%; }
+        .card-description { font-size: 0.95rem; color: #94a3b8; margin-bottom: 1.5rem; height: 50px; overflow: hidden; }
+        .btn { display: block; padding: 0.8rem; background: var(--accent-gradient); color: white; border-radius: 12px; font-weight: 600; text-align: center; }
         footer { text-align: center; padding: 3rem; border-top: 1px solid rgba(255, 255, 255, 0.1); color: #64748b; }
         @media (max-width: 768px) { header h1 { font-size: 2.2rem; } .grid { grid-template-columns: 1fr; } }
     </style>
@@ -40,20 +40,32 @@
     <div class="bg-glow"></div>
     <header>
         <h1>منصة شاكر الكردي</h1>
-        <p>بوابتك الحصرية لتحميل أقوى البرامج والأدوات التقنية المختارة بعناية.</p>
+        <p>تحميل أفضل البرامج والأدوات التقنية المختارة بعناية.</p>
     </header>
 
     <div class="container">
         <div class="grid">
-            <!-- البطاقة الوحيدة: قم بتنزيل وربح 100$ -->
+            <!-- البرنامج الأول -->
             <a href="https://os8.me/7zkGST" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3253.jpeg');">
                     <div class="card-overlay"></div>
                 </div>
                 <div class="card-content">
                     <h2 class="card-title">قم بتنزيل وربح 100$</h2>
-                    <p class="card-description">سجل الآن للحصول على مكافأة نقدية تبدأ من 8$ وتصل إلى 100$ عبر برنامج المكافآت.</p>
+                    <p class="card-description">سجل الآن للحصول على مكافأة نقدية تبدأ من 8$ وتصل إلى 100$.</p>
                     <div class="btn">احصل على الجائزة الآن</div>
+                </div>
+            </a>
+
+            <!-- البرنامج الثاني -->
+            <a href="https://os8.me/3MWHRz" class="card" target="_blank">
+                <div class="card-image" style="background-image: url('IMG_3273.jpeg');">
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">عرض خاص جديد</h2>
+                    <p class="card-description">اكتشف المزيد من الفرص والمكافآت الحصرية المتاحة لك الآن.</p>
+                    <div class="btn">انقر هنا للمزيد</div>
                 </div>
             </a>
         </div>
