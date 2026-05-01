@@ -199,9 +199,7 @@
                 </div>
                 <div class="card-content">
                     <h2 class="card-title">قم بتنزيل وربح 100$</h2>
-                    <p class="card-description">سجل الآن للحصول على مكافأة نقدية تبدأ من 8$ وتصل إلى 100$ عبر برنامج المكافآت الحصري.</p>
-                    <div class="btn">احصل على الجائزة الآن</div>
-                </div>
+                    <p class="card-description">
             </a>
 
                 </div>
