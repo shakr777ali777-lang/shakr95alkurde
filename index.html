@@ -3,111 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- أهم أكواد للظهور في بحث جوجل باسم شاكر الكردي -->
-    <title>منصة شاكر الكردي | عروض الربح والتسوق المجاني</title>
-    <meta name="description" content="الموقع الرسمي لمنصة شاكر الكردي. اكتشف أقوى طرق الربح من الإنترنت، عروض تيمو 0 دولار، وبونص التداول الحصري.">
-    <meta name="keywords" content="شاكر الكردي, منصة شاكر الكردي, ربح 100$, تيمو مجاني, تداول شاكر الكردي">
-    
-    <!-- كود إثبات الملكية الخاص بك -->
     <meta name="google-site-verification" content="google2c03c10697eff070" />
 
-    <!-- أوسمة التواصل الاجتماعي (تظهر صورتك عند مشاركة الرابط) -->
-    <meta property="og:title" content="منصة شاكر الكردي">
-    <meta property="og:description" content="بوابتك لأقوى عروض الربح والتسوق المجاني.">
-    <meta property="og:image" content="IMG_3298.jpeg">
-    <meta property="og:url" content="https://shakr777ali777-lang.github.io">
-
+    <title>منصة شاكر الكردي | عروض الربح والتسوق</title>
+    <meta name="description" content="الموقع الرسمي لمنصة شاكر الكردي لأقوى عروض الربح والخصومات الحصرية.">
+    
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --gold-primary: #bf953f; --gold-light: #fcf6ba; --gold-dark: #b38728;
-            --bg-dark: #0f172a; --card-bg: rgba(30, 41, 59, 0.85);
-            --accent-gradient: linear-gradient(135deg, #ff4d4d 0%, #f97316 100%);
+            --gold-gradient: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            --bg-dark: #070b14;
+            --card-bg: rgba(22, 32, 51, 0.95);
+            --text-main: #ffffff;
+            --accent-orange: #ff5722;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-        body { background-color: var(--bg-dark); color: #f8fafc; overflow-x: hidden; position: relative; }
+        body { background-color: var(--bg-dark); color: var(--text-main); overflow-x: hidden; position: relative; min-height: 100vh; }
 
-        /* تأثير الدولارات المتساقطة الخلفي */
-        .money-container { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; opacity: 0.15; }
-        .dollar-rain { position: absolute; top: -50px; color: #22c55e; font-size: 24px; animation: fall linear infinite; }
-        @keyframes fall { 
-            0% { transform: translateY(0) rotate(0deg); opacity: 0; } 
-            10% { opacity: 1; } 
-            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; } 
+        /* إصلاح تأثير الدولارات المتساقطة - وجعلها واضحة */
+        .money-rain-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
         }
 
-        /* توزيع الدولارات */
-        .dollar-rain:nth-child(1) { left: 5%; animation-duration: 6s; }
-        .dollar-rain:nth-child(2) { left: 20%; animation-duration: 8s; animation-delay: 2s; }
-        .dollar-rain:nth-child(3) { left: 45%; animation-duration: 7s; animation-delay: 1s; }
-        .dollar-rain:nth-child(4) { left: 75%; animation-duration: 9s; animation-delay: 3s; }
-        .dollar-rain:nth-child(5) { left: 90%; animation-duration: 5s; }
+        .dollar-rain {
+            position: absolute;
+            top: -50px;
+            color: #2ecc71; /* لون أخضر واضح للدولار */
+            font-size: 28px;
+            font-weight: bold;
+            text-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+            animation: fall linear infinite;
+            opacity: 0.3; /* تعتيم متوازن */
+        }
 
-        header { padding: 5rem 2rem; text-align: center; background: rgba(15, 23, 42, 0.7); backdrop-filter: blur(10px); border-bottom: 2px solid var(--gold-dark); }
-        
+        @keyframes fall {
+            0% { transform: translateY(-50px) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* توزيع الدولارات بشكل مكثف في الخلفية */
+        .dollar-rain:nth-child(1) { left: 5%; animation-duration: 5s; animation-delay: 0s; }
+        .dollar-rain:nth-child(2) { left: 15%; animation-duration: 8s; animation-delay: 2s; }
+        .dollar-rain:nth-child(3) { left: 30%; animation-duration: 6s; animation-delay: 1s; }
+        .dollar-rain:nth-child(4) { left: 45%; animation-duration: 9s; animation-delay: 4s; }
+        .dollar-rain:nth-child(5) { left: 60%; animation-duration: 7s; animation-delay: 0.5s; }
+        .dollar-rain:nth-child(6) { left: 75%; animation-duration: 5s; animation-delay: 3s; }
+        .dollar-rain:nth-child(7) { left: 85%; animation-duration: 8s; animation-delay: 1.5s; }
+        .dollar-rain:nth-child(8) { left: 95%; animation-duration: 6s; animation-delay: 5s; }
+
+        header { padding: 4rem 1rem; text-align: center; border-bottom: 2px solid #b38728; background: rgba(7, 11, 20, 0.8); backdrop-filter: blur(5px); }
+
         .premium-name {
-            font-size: clamp(2.5rem, 8vw, 4rem); font-weight: 900;
-            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            animation: shine 4s infinite linear; background-size: 200% auto;
+            font-size: clamp(2.5rem, 7vw, 4rem);
+            font-weight: 900;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            filter: drop-shadow(0px 4px 10px rgba(0,0,0,0.5));
+            background-size: 200% auto;
+            animation: shine 4s infinite linear;
         }
+
         @keyframes shine { to { background-position: 200% center; } }
 
-        .container { max-width: 1200px; margin: 3rem auto; padding: 0 2rem; }
+        .container { max-width: 1100px; margin: 3rem auto; padding: 0 1.5rem; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
 
-        .card { background: var(--card-bg); border-radius: 20px; overflow: hidden; transition: 0.4s; border: 1px solid rgba(255, 255, 255, 0.1); text-decoration: none; display: block; }
-        .card:hover { transform: translateY(-10px); border-color: var(--gold-primary); box-shadow: 0 15px 30px rgba(0,0,0,0.5); }
-        .card-image { width: 100%; height: 200px; background-size: cover; background-position: center; }
+        /* إصلاح البطاقات والروابط لجعلها مقروءة جداً */
+        .card { 
+            background: var(--card-bg); 
+            border-radius: 20px; 
+            overflow: hidden; 
+            transition: 0.3s; 
+            border: 1px solid rgba(184, 134, 11, 0.3); 
+            text-decoration: none; 
+            display: block;
+        }
+        .card:hover { transform: translateY(-10px); border-color: #fcf6ba; box-shadow: 0 10px 30px rgba(0,0,0,0.7); }
+
+        .card-image { width: 100%; height: 200px; background-size: cover; background-position: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        
         .card-content { padding: 1.5rem; text-align: center; }
-        .btn { display: block; padding: 0.8rem; background: var(--accent-gradient); color: white; border-radius: 12px; font-weight: 700; margin-top: 10px; }
+        
+        /* جعل نصوص العناوين بيضاء واضحة */
+        .card-title { 
+            font-size: 1.3rem; 
+            font-weight: 700; 
+            margin-bottom: 1rem; 
+            color: #ffffff !important; /* لون أبيض إجباري */
+            text-decoration: none;
+        }
+
+        .btn { 
+            display: block; 
+            padding: 0.8rem; 
+            background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%); 
+            color: #ffffff !important; 
+            border-radius: 12px; 
+            font-weight: 700; 
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(255, 87, 34, 0.3);
+        }
+
+        footer { text-align: center; padding: 3rem; color: #64748b; font-size: 0.9rem; }
     </style>
 </head>
 <body>
-    <div class="money-container">
+
+    <!-- حاوية الدولارات المتساقطة -->
+    <div class="money-rain-container">
         <div class="dollar-rain">$</div><div class="dollar-rain">$</div>
         <div class="dollar-rain">$</div><div class="dollar-rain">$</div>
-        <div class="dollar-rain">$</div>
+        <div class="dollar-rain">$</div><div class="dollar-rain">$</div>
+        <div class="dollar-rain">$</div><div class="dollar-rain">$</div>
     </div>
 
     <header>
         <h1 class="premium-name">شــاكر الكــردي</h1>
-        <p style="color: #94a3b8; margin-top: 10px;">بوابتك لأقوى عروض الربح والتسوق المجاني الحصرية</p>
+        <p style="color: #cbd5e1; margin-top: 10px; font-weight: 400;">بوابتك لأقوى عروض الربح والتسوق المجاني الحصرية</p>
     </header>
 
     <div class="container">
         <div class="grid">
-            <!-- 1. تيمو -->
+            
+            <!-- تيمو -->
             <a href="https://temu.to/k/epv72au60x4" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3288.jpeg');"></div>
-                <div class="card-content"><h3>تيمو 0 دولار</h3><div class="btn">تسوق الآن</div></div>
+                <div class="card-content">
+                    <h2 class="card-title">تيمو 0 دولار - هدايا مجانية</h2>
+                    <div class="btn">تسوق الآن مجاناً</div>
+                </div>
             </a>
 
-            <!-- 2. رابط الربح المحدث -->
+            <!-- الرابط المحدث Make Money -->
             <a href="https://os8.me/QprbQS" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3253.jpeg');"></div>
-                <div class="card-content"><h3>رابط ربح 100$</h3><div class="btn">ابدأ الآن</div></div>
+                <div class="card-content">
+                    <h2 class="card-title">رابط ربح 100$</h2>
+                    <div class="btn">ابدأ الربح الآن</div>
+                </div>
             </a>
 
-            <!-- 3. الربح الثاني -->
+            <!-- الربح الثاني -->
             <a href="https://os8.me/3MWHRz" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3273.jpeg');"></div>
-                <div class="card-content"><h3>اربح 100$ فوراً</h3><div class="btn">اضغط هنا</div></div>
+                <div class="card-content">
+                    <h2 class="card-title">اربح 100$ بأقل من ساعة</h2>
+                    <div class="btn">اضغط هنا للربح</div>
+                </div>
             </a>
 
-            <!-- 4. التداول -->
+            <!-- التداول -->
             <a href="https://pocket-friends.co/r/el2lqoq26c" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3293.jpeg');"></div>
-                <div class="card-content"><h3>تداول الآن - بونص 100%</h3><div class="btn">سجل الآن</div></div>
+                <div class="card-content">
+                    <h2 class="card-title">بونص إيداع 100% | تداول الآن</h2>
+                    <div class="btn">احصل على البونص</div>
+                </div>
             </a>
+
         </div>
     </div>
 
-    <footer style="text-align: center; padding: 3rem; color: #64748b;">
+    <footer>
         <p>جميع الحقوق محفوظة &copy; 2026 | شاكر الكردي</p>
     </footer>
+
 </body>
 </html>
