@@ -1,1 +1,215 @@
-# shakr95alkurde
+# shakr95alkurde<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- هذا هو العنوان الذي سيظهر في محرك بحث جوجل -->
+    <title>منصة شاكر الكردي | تحميل أفضل البرامج</title>
+    <meta name="description" content="منصة شاكر الكردي لتحميل أحدث البرامج والأدوات التقنية المختارة بعناية.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00d2ff;
+            --secondary-color: #3a7bd5;
+            --bg-dark: #0f172a;
+            --card-bg: #1e293b;
+            --text-light: #f8fafc;
+            --accent-gradient: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .bg-glow {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(58, 123, 213, 0.1) 0%, transparent 50%);
+            z-index: -1;
+        }
+
+        header {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem 5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            position: relative;
+            cursor: pointer;
+            text-decoration: none;
+            display: block;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            border-color: var(--primary-color);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            transition: transform 0.5s ease;
+        }
+
+        .card:hover .card-image {
+            transform: scale(1.1);
+        }
+
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.9));
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            position: relative;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-light);
+        }
+
+        .card-description {
+            font-size: 0.95rem;
+            color: #94a3b8;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: var(--accent-gradient);
+            color: white;
+            border-radius: 12px;
+            font-weight: 600;
+            text-align: center;
+            width: 100%;
+            transition: opacity 0.3s;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #64748b;
+        }
+
+        /* صور افتراضية احترافية */
+        .img-1 { background-image: url('https://images.unsplash.com/photo-1614850523296-d8c1af93d400?auto=format&fit=crop&w=800&q=80'); }
+        .img-2 { background-image: url('https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=800&q=80'); }
+        .img-3 { background-image: url('https://images.unsplash.com/photo-1618477388954-7852f32655ec?auto=format&fit=crop&w=800&q=80'); }
+        .img-4 { background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80'); }
+
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-glow"></div>
+
+    <header>
+        <h1>منصة شاكر الكردي</h1>
+        <p>بوابتك الحصرية لتحميل أقوى البرامج والأدوات التقنية المختارة بعناية.</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            <!-- برنامج 1 -->
+            <a href="رابط_البرنامج_هنا" class="card" target="_blank">
+                <div class="card-image img-1">
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">اسم البرنامج الأول</h2>
+                    <p class="card-description">وصف مختصر ومميز للبرنامج وما يقدمه للمستخدم.</p>
+                    <div class="btn">تحميل الآن</div>
+                </div>
+            </a>
+
+            <!-- برنامج 2 -->
+            <a href="رابط_البرنامج_هنا" class="card" target="_blank">
+                <div class="card-image img-2">
+                    <div class="card-overlay"></div>
+                </div>
+                <div class="card-content">
+                    <h2 class="card-title">اسم البرنامج الثاني</h2>
+                    <p class="card-description">وصف مختصر ومميز للبرنامج وما يقدمه للمستخدم.</p>
+                    <div class="btn">تحميل الآن</div>
+                </div>
+            </a>
+            
+            <!-- يمكنك تكرار الكروت أعلاه لإضافة برامج أكثر -->
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 | منصة شاكر الكردي</p>
+    </footer>
+</body>
+</html>
