@@ -20,7 +20,7 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
         body { background-color: var(--bg-dark); color: var(--text-main); overflow-x: hidden; position: relative; min-height: 100vh; }
 
-        /* تعديل الدولارات لتكون واضحة جداً وبألوان فاقعة */
+        /* تأثير الدولارات: ضخمة، واضحة، بنمط نيون */
         .money-rain-container { 
             position: fixed; 
             top: 0; 
@@ -34,12 +34,12 @@
         .dollar-rain { 
             position: absolute; 
             top: -100px; 
-            color: #00ff41; /* أخضر نيون لزيادة الوضوح */
-            font-size: 60px; /* حجم ضخم */
+            color: #00ff41; 
+            font-size: 70px; /* حجم أكبر لجعلها واضحة جداً */
             font-weight: 900; 
             animation: fall linear infinite; 
-            opacity: 0.9 !important; /* وضوح عالي جداً */
-            text-shadow: 0 0 20px rgba(0, 255, 65, 0.8), 2px 2px 5px #000; 
+            opacity: 0.95 !important; /* وضوح كامل تقريباً */
+            text-shadow: 0 0 25px rgba(0, 255, 65, 1), 2px 2px 10px #000; 
         }
 
         @keyframes fall {
@@ -47,12 +47,11 @@
             100% { transform: translateY(110vh) rotate(360deg); }
         }
 
-        /* توزيع الدولارات بكثافة */
-        .dollar-rain:nth-child(1) { left: 10%; animation-duration: 3s; }
-        .dollar-rain:nth-child(2) { left: 30%; animation-duration: 5s; animation-delay: 1s; }
-        .dollar-rain:nth-child(3) { left: 50%; animation-duration: 4s; animation-delay: 2s; }
-        .dollar-rain:nth-child(4) { left: 70%; animation-duration: 6s; animation-delay: 0.5s; }
-        .dollar-rain:nth-child(5) { left: 90%; animation-duration: 3.5s; animation-delay: 1.5s; }
+        .dollar-rain:nth-child(1) { left: 5%; animation-duration: 4s; }
+        .dollar-rain:nth-child(2) { left: 25%; animation-duration: 6s; animation-delay: 1s; }
+        .dollar-rain:nth-child(3) { left: 50%; animation-duration: 5s; animation-delay: 2s; }
+        .dollar-rain:nth-child(4) { left: 75%; animation-duration: 7s; animation-delay: 0.5s; }
+        .dollar-rain:nth-child(5) { left: 90%; animation-duration: 4.5s; animation-delay: 1.5s; }
 
         header { padding: 4rem 1rem; text-align: center; border-bottom: 2px solid #b38728; background: rgba(7, 11, 20, 0.8); backdrop-filter: blur(5px); }
         .premium-name {
@@ -62,7 +61,7 @@
         }
         @keyframes shine { to { background-position: 200% center; } }
 
-        /* الحاوية لضمان عدم تكرار العناصر */
+        /* الحاوية: شبكة واحدة فقط تمنع تكرار البرامج */
         .container { max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem; }
         .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
 
@@ -79,7 +78,6 @@
 </head>
 <body>
 
-    <!-- حاوية الدولارات - واضحة جداً -->
     <div class="money-rain-container">
         <div class="dollar-rain">$</div><div class="dollar-rain">$</div>
         <div class="dollar-rain">$</div><div class="dollar-rain">$</div>
@@ -94,7 +92,7 @@
     <div class="container">
         <div class="grid">
             
-            <!-- 1. الربح من المشي فقط -->
+            <!-- 1. الربح من المشي -->
             <a href="https://swcapp.com/i/shakralkurde" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3361.jpeg');"></div>
                 <div class="card-content">
@@ -103,7 +101,7 @@
                 </div>
             </a>
 
-            <!-- 2. خدمة المتابعين مع التنبيه -->
+            <!-- 2. خدمة المتابعين -->
             <div class="card" onclick="processOrder()">
                 <div class="card-image" style="background-image: url('IMG_3339.jpeg');"></div>
                 <div class="card-content">
@@ -113,7 +111,7 @@
                 </div>
             </div>
 
-            <!-- 3. رابط الربح 100$ (1) -->
+            <!-- 3. ربح 100$ (1) -->
             <a href="https://os8.me/QprbQS" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3253.jpeg');"></div>
                 <div class="card-content">
@@ -122,7 +120,7 @@
                 </div>
             </a>
 
-            <!-- 4. رابط الربح 100$ (2) -->
+            <!-- 4. ربح 100$ (2) -->
             <a href="https://os8.me/3MWHRz" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3273.jpeg');"></div>
                 <div class="card-content">
