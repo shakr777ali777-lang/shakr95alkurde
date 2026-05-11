@@ -4,157 +4,449 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="google2c03c10697eff070" />
-
-    <title>منصة شاكر الكردي | خدمات الربح المتكاملة</title>
+    <title>شاكر الكردي | منصة الثراء الرقمي</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         :root {
-            --gold-gradient: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
-            --bg-dark: #070b14;
-            --card-bg: rgba(22, 32, 51, 0.95);
-            --text-main: #ffffff;
+            --gold: #d4af37;
+            --gold-light: #f9d423;
+            --gold-dark: #9c7c1a;
+            --black-rich: #0a0a0a;
+            --black-soft: #111111;
+            --card-bg: #151515;
+            --text-white: #ffffff;
+            --text-gray: #b8b8b8;
+            --success: #00d26a;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Cairo', sans-serif; }
-        body { background-color: var(--bg-dark); color: var(--text-main); overflow-x: hidden; position: relative; min-height: 100vh; }
-
-        /* تأثير الدولارات */
-        .money-rain-container { 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            z-index: -1; 
-            pointer-events: none; 
-        }
-
-        .dollar-rain { 
-            position: absolute; 
-            top: -100px; 
-            color: #00ff41; 
-            font-size: 70px; 
-            font-weight: 900; 
-            animation: fall linear infinite; 
-            opacity: 0.95 !important; 
-            text-shadow: 0 0 25px rgba(0, 255, 65, 1), 2px 2px 10px #000; 
-        }
-
-        @keyframes fall {
-            0% { transform: translateY(-100px) rotate(0deg); }
-            100% { transform: translateY(110vh) rotate(360deg); }
-        }
-
-        .dollar-rain:nth-child(1) { left: 5%; animation-duration: 4s; }
-        .dollar-rain:nth-child(2) { left: 25%; animation-duration: 6s; animation-delay: 1s; }
-        .dollar-rain:nth-child(3) { left: 50%; animation-duration: 5s; animation-delay: 2s; }
-        .dollar-rain:nth-child(4) { left: 75%; animation-duration: 7s; animation-delay: 0.5s; }
-        .dollar-rain:nth-child(5) { left: 90%; animation-duration: 4.5s; animation-delay: 1.5s; }
-
-        header { padding: 4rem 1rem; text-align: center; border-bottom: 2px solid #b38728; background: rgba(7, 11, 20, 0.8); backdrop-filter: blur(5px); }
-        .premium-name {
-            font-size: clamp(2.5rem, 7vw, 4rem); font-weight: 900;
-            background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-size: 200% auto; animation: shine 4s infinite linear;
-        }
-        @keyframes shine { to { background-position: 200% center; } }
-
-        .container { max-width: 1200px; margin: 3rem auto; padding: 0 1.5rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; }
-
-        .card { background: var(--card-bg); border-radius: 20px; overflow: hidden; transition: 0.3s; border: 1px solid rgba(184, 134, 11, 0.3); text-decoration: none; display: block; cursor: pointer; height: 100%; }
-        .card:hover { transform: translateY(-10px); border-color: #fcf6ba; box-shadow: 0 10px 30px rgba(0,0,0,0.7); }
-        .card-image { width: 100%; height: 200px; background-size: cover; background-position: center; }
-        .card-content { padding: 1.5rem; text-align: center; }
-        .card-title { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem; color: #ffffff !important; }
-        .card-desc { font-size: 0.9rem; color: #ffeb3b; font-weight: bold; margin-bottom: 1rem; }
-        .btn { display: block; padding: 0.8rem; background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%); color: #ffffff !important; border-radius: 12px; font-weight: 700; text-decoration: none; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
         
-        .insta-btn { background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045) !important; }
+        body { 
+            background: var(--black-rich); 
+            color: var(--text-white); 
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+        }
 
-        footer { text-align: center; padding: 3rem; color: #64748b; font-size: 0.9rem; }
+        /* تأثير الذهب المتساقط */
+        .gold-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .gold-coin {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, var(--gold-light), var(--gold-dark));
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+            animation: goldFall linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes goldFall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.7; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+
+        .gold-coin:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
+        .gold-coin:nth-child(2) { left: 30%; animation-duration: 10s; animation-delay: 2s; }
+        .gold-coin:nth-child(3) { left: 50%; animation-duration: 7s; animation-delay: 4s; }
+        .gold-coin:nth-child(4) { left: 70%; animation-duration: 9s; animation-delay: 1s; }
+        .gold-coin:nth-child(5) { left: 90%; animation-duration: 11s; animation-delay: 3s; }
+
+        /* الهيدر */
+        header {
+            padding: 5rem 1.5rem 4rem;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(180deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.7) 100%);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 10;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+            color: var(--black-rich);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .premium-name {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, #f9d423 0%, #d4af37 25%, #f9d423 50%, #d4af37 75%, #f9d423 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: goldShine 3s linear infinite;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 80px rgba(212, 175, 55, 0.3);
+        }
+
+        @keyframes goldShine {
+            to { background-position: 200% center; }
+        }
+
+        .subtitle {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            font-weight: 500;
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* المحتوى */
+        .container {
+            max-width: 1300px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: var(--text-white);
+        }
+
+        .section-title span {
+            color: var(--gold);
+        }
+
+        .section-desc {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 24px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(212, 175, 55, 0.15);
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card:hover {
+            transform: translateY(-12px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .card-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: linear-gradient(180deg, transparent, var(--card-bg));
+        }
+
+        .card-content {
+            padding: 2rem;
+            position: relative;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            color: var(--text-white);
+            line-height: 1.4;
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
+            color: var(--black-rich);
+            border-radius: 14px;
+            font-weight: 800;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s;
+            border: none;
+        }
+
+        .btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        .btn-insta {
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+            color: white;
+        }
+
+        .warning-box {
+            background: rgba(255, 87, 34, 0.1);
+            border: 1px solid rgba(255, 87, 34, 0.3);
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            color: #ff8a65;
+        }
+
+        footer {
+            text-align: center;
+            padding: 4rem 1.5rem;
+            margin-top: 5rem;
+            border-top: 1px solid rgba(212, 175, 55, 0.1);
+            background: var(--black-soft);
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .stats { gap: 2rem; }
+            .stat-number { font-size: 2rem; }
+            .grid { grid-template-columns: 1fr; }
+        }
     </style>
 </head>
 <body>
 
-    <div class="money-rain-container">
-        <div class="dollar-rain">$</div><div class="dollar-rain">$</div>
-        <div class="dollar-rain">$</div><div class="dollar-rain">$</div>
-        <div class="dollar-rain">$</div>
+    <div class="gold-particles">
+        <div class="gold-coin"></div>
+        <div class="gold-coin"></div>
+        <div class="gold-coin"></div>
+        <div class="gold-coin"></div>
+        <div class="gold-coin"></div>
     </div>
 
     <header>
+        <div class="badge">
+            <i class="fas fa-crown"></i> منصة موثوقة 100%
+        </div>
         <h1 class="premium-name">شــاكر الكــردي</h1>
-        <p style="color: #cbd5e1; margin-top: 10px;">بوابتك لأقوى عروض الربح والخدمات الحصرية</p>
+        <p class="subtitle">خبير الربح من الإنترنت | أساعدك تبني دخلك الرقمي وتصل للحرية المالية</p>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">50K+</span>
+                <span class="stat-label">عميل راضي</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">$2M+</span>
+                <span class="stat-label">أرباح المتابعين</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4.9★</span>
+                <span class="stat-label">تقييم الخدمات</span>
+            </div>
+        </div>
     </header>
 
     <div class="container">
+        <h2 class="section-title">خدمات <span>الربح الحصري</span></h2>
+        <p class="section-desc">اختر الفرصة اللي تناسبك وابدأ رحلة الثراء اليوم</p>
+        
         <div class="grid">
             
-            <!-- 1. الربح من المشي -->
             <a href="https://swcapp.com/i/shakralkurde" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3361.jpeg');"></div>
                 <div class="card-content">
+                    <div class="card-tag">الأكثر طلباً</div>
                     <h2 class="card-title">الربح من المشي فقط</h2>
-                    <div class="btn">حمل التطبيق وابدأ الآن</div>
+                    <p class="card-desc">حول خطواتك اليومية إلى دولارات حقيقية. آلاف المستخدمين يسحبون شهرياً</p>
+                    <div class="btn">
+                        <i class="fas fa-download"></i>
+                        حمل التطبيق وابدأ الآن
+                    </div>
                 </div>
             </a>
 
-            <!-- 2. خدمة المتابعين -->
             <div class="card" onclick="processOrder()">
                 <div class="card-image" style="background-image: url('IMG_3339.jpeg');"></div>
                 <div class="card-content">
-                    <h2 class="card-title">خدمة 10k انستا أو تيك توك</h2>
-                    <p class="card-desc">⚠️ ارسل اسم الحساب أو واتساب مع التحويل</p>
-                    <div class="btn">اطلب الخدمة الآن</div>
+                    <div class="card-tag">خدمة VIP</div>
+                    <h2 class="card-title">10K متابع انستا/تيك توك</h2>
+                    <div class="warning-box">
+                        <i class="fas fa-exclamation-triangle"></i> أرسل اسم الحساب أو واتساب مع التحويل
+                    </div>
+                    <p class="card-desc">متابعين حقيقيين متفاعلين يرفعون حسابك للاكسبلور</p>
+                    <div class="btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        اطلب الخدمة الآن
+                    </div>
                 </div>
             </div>
 
-            <!-- 3. ربح 100$ (1) -->
             <a href="https://os8.me/iNwn2m" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3253.jpeg');"></div>
                 <div class="card-content">
-                    <h2 class="card-title">رابط ربح 100$ (1)</h2>
-                    <div class="btn">ابدأ الربح الآن</div>
+                    <div class="card-tag">عرض محدود</div>
+                    <h2 class="card-title">اربح 100$ فوراً</h2>
+                    <p class="card-desc">طريقة مجربة ومضمونة. سحب فوري على PayPal خلال دقائق</p>
+                    <div class="btn">
+                        <i class="fas fa-rocket"></i>
+                        ابدأ الربح الآن
+                    </div>
                 </div>
             </a>
 
-            <!-- 4. ربح 100$ (2) -->
             <a href="https://os8.me/3MWHRz" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3273.jpeg');"></div>
                 <div class="card-content">
-                    <h2 class="card-title">اربح 100$ بأقل من ساعة (2)</h2>
-                    <div class="btn">اضغط هنا للربح</div>
+                    <div class="card-tag">سريع</div>
+                    <h2 class="card-title">100$ في أقل من ساعة</h2>
+                    <p class="card-desc">استراتيجية حصرية ما تحتاج خبرة. فقط جوال وانترنت</p>
+                    <div class="btn">
+                        <i class="fas fa-bolt"></i>
+                        اضغط هنا للربح
+                    </div>
                 </div>
             </a>
 
-            <!-- 5. تيمو -->
             <a href="https://temu.to/k/epv72au60x4" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3288.jpeg');"></div>
                 <div class="card-content">
-                    <h2 class="card-title">تيمو 0 دولار - هدايا مجانية</h2>
-                    <div class="btn">تسوق الآن مجاناً</div>
+                    <div class="card-tag">مجاني 100%</div>
+                    <h2 class="card-title">تيمو: منتجات بـ 0$</h2>
+                    <p class="card-desc">احصل على هدايا ومنتجات مجانية بدون دفع شحن. عرض خاص للمتابعين</p>
+                    <div class="btn">
+                        <i class="fas fa-gift"></i>
+                        تسوق الآن مجاناً
+                    </div>
                 </div>
             </a>
 
-            <!-- 6. التداول -->
             <a href="https://pocket-friends.co/r/el2lqoq26c" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3293.jpeg');"></div>
                 <div class="card-content">
+                    <div class="card-tag">للمبتدئين</div>
                     <h2 class="card-title">بونص تداول 100%</h2>
-                    <div class="btn">سجل واحصل على البونص</div>
+                    <p class="card-desc">ضاعف رأس مالك فوراً. منصة مرخصة وسحب سريع خلال 24 ساعة</p>
+                    <div class="btn">
+                        <i class="fas fa-chart-line"></i>
+                        سجل واحصل على البونص
+                    </div>
                 </div>
             </a>
 
-            <!-- التحديث الجديد: حساب الانستغرام في آخر سطر -->
             <a href="https://www.instagram.com/sh95ali7?igsh=MTFvNDRiYWg2eXI4ZA==" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3372.jpeg');"></div>
                 <div class="card-content">
-                    <h2 class="card-title">حسابي الجديد على الانستغرام</h2>
-                    <p class="card-desc">⚠️ إذا بدك توصل لكل طرق الربح تابعني</p>
-                    <div class="btn insta-btn">تابعني الآن</div>
+                    <div class="card-tag">حصري</div>
+                    <h2 class="card-title">تابعني على الانستغرام</h2>
+                    <p class="card-desc">أنزل طرق ربح يومية + إثباتات سحب + نصائح حصرية للمتابعين فقط</p>
+                    <div class="btn btn-insta">
+                        <i class="fab fa-instagram"></i>
+                        تابعني الآن
+                    </div>
                 </div>
             </a>
 
@@ -162,12 +454,14 @@
     </div>
 
     <footer>
-        <p>جميع الحقوق محفوظة &copy; 2026 | شاكر الكردي</p>
+        <div class="footer-logo">شاكر الكردي</div>
+        <p style="color: var(--text-gray); margin-bottom: 1rem;">منصة الثراء الرقمي الأولى عربياً</p>
+        <p style="color: #64748b; font-size: 0.9rem;">جميع الحقوق محفوظة &copy; 2026</p>
     </footer>
 
     <script>
         function processOrder() {
-            alert("يرجى إرسال رقم واتساب أو اسم حساب لآخذ المعلومات وإرسال المتابعين في ملاحظات الدفع.");
+            alert("📱 يرجى إرسال رقم واتساب أو اسم الحساب في ملاحظات الدفع لاستلام الخدمة فوراً");
             window.open("https://www.paypal.com/ncp/payment/ULATK59NCA2SE", "_blank");
         }
     </script>
