@@ -20,6 +20,7 @@
             --text-white: #ffffff;
             --text-gray: #b8b8b8;
             --success: #00d26a;
+            --whatsapp-color: #25D366;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
@@ -241,6 +242,11 @@
             margin-bottom: 1rem;
         }
 
+        .card-tag-whatsapp {
+            background: rgba(37, 211, 102, 0.15);
+            color: var(--whatsapp-color);
+        }
+
         .card-title {
             font-size: 1.4rem;
             font-weight: 800;
@@ -254,6 +260,15 @@
             color: var(--text-gray);
             margin-bottom: 1.5rem;
             line-height: 1.6;
+        }
+
+        .card-subtext {
+            display: block;
+            font-size: 0.8rem;
+            color: #888888;
+            margin-top: -1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
         }
 
         .btn {
@@ -276,6 +291,15 @@
         .btn:hover {
             transform: scale(1.02);
             box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #128C7E 0%, var(--whatsapp-color) 100%);
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
         }
 
         .btn-insta {
@@ -355,6 +379,21 @@
         <p class="section-desc">اختر الفرصة اللي تناسبك وابدأ رحلة الثراء اليوم</p>
         
         <div class="grid">
+            
+            <!-- رابط الواتساب (تمت إضافته أول رابط كـ VIP) -->
+            <a href="https://whatsapp.com/channel/0029VbChT0u0rGiI9fLBR11q" class="card" target="_blank">
+                <div class="card-image" style="background-image: url('IMG_3372.jpeg');"></div> <!-- يمكنك تغيير الصورة هنا لاحقاً -->
+                <div class="card-content">
+                    <div class="card-tag card-tag-whatsapp">قناة رسمية</div>
+                    <h2 class="card-title">رابط الواتساب</h2>
+                    <p class="card-desc">انضم إلى مجتمعنا الحصري على الواتساب لتلقي التحديثات والفرص أولاً بأول.</p>
+                    <span class="card-subtext">رح نزل كل شرح برامج ربح هون</span>
+                    <div class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        انضم للقناة الآن
+                    </div>
+                </div>
+            </a>
             
             <a href="https://swcapp.com/i/shakralkurde" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3361.jpeg');"></div>
