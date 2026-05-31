@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- كود تحقق جوجل الجديد والمحدث -->
+    <!-- كود تحقق جوجل المحدث -->
     <meta name="google-site-verification" content="QeHrlPO6cc8F3N-Wrg69_Db53_t1N16dFG9HqXEvv5c" />
     
     <title>شاكر الكردي | منصة الثراء الرقمي</title>
@@ -24,6 +24,7 @@
             --text-gray: #b8b8b8;
             --success: #00d26a;
             --whatsapp-color: #25D366;
+            --ad-color: #ff3333;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
@@ -250,6 +251,18 @@
             color: var(--whatsapp-color);
         }
 
+        .card-tag-ad {
+            background: rgba(212, 175, 55, 0.2);
+            color: var(--gold-light);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 0.6; }
+            50% { opacity: 1; }
+            100% { opacity: 0.6; }
+        }
+
         .card-title {
             font-size: 1.4rem;
             font-weight: 800;
@@ -303,6 +316,22 @@
 
         .btn-whatsapp:hover {
             box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        }
+
+        .btn-ad {
+            background: linear-gradient(135deg, #f9d423 0%, #ff4e50 100%);
+            color: #000;
+            font-size: 1.1rem;
+        }
+
+        /* حاوية بانر الإعلانات المدمجة من Adsterra */
+        .adsterra-banner-container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            padding: 0 1rem;
+            overflow: hidden;
         }
 
         footer {
@@ -382,6 +411,20 @@
                 </div>
             </a>
 
+            <!-- كرت إعلان الرابط المباشر (Smartlink) الجديد والمربح جداً لك -->
+            <a href="https://www.effectivecpmnetwork.com/e4i5z3q12?key=4834a04163cd4623714cbb12f3b552fa" class="card" target="_blank">
+                <div class="card-image" style="background-image: url('IMG_3293.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag card-tag-ad">هدية سريعة</div>
+                    <h2 class="card-title">🎁 مكافأة كاش إضافية يومية</h2>
+                    <p class="card-desc">اضغط هنا لتفعيل مكافأة مالية إضافية خاصة بمتابعي المنصة وتسجيل نقاط مجانية.</p>
+                    <div class="btn btn-ad">
+                        <i class="fas fa-gift"></i>
+                        اضغط هنا واستلم مكافأتك
+                    </div>
+                </div>
+            </a>
+
             <!-- رابط الـ 100$ الثاني -->
             <a href="https://os8.me/3MWHRz" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3273.jpeg');"></div>
@@ -454,6 +497,12 @@
             </a>
 
         </div>
+
+        <!-- مساحة إعلان البانر الأصلي المدمج من Adsterra -->
+        <div class="adsterra-banner-container">
+            <div id="container-cdc5aaaa55bb9c8fd8f3b8faf2a84143"></div>
+        </div>
+
     </div>
 
     <footer>
@@ -461,6 +510,17 @@
         <p style="color: var(--text-gray); margin-bottom: 1rem;">منصة الثراء الرقمي الأولى عربياً</p>
         <p style="color: #64748b; font-size: 0.9rem;">جميع الحقوق محفوظة &copy; 2026</p>
     </footer>
+
+    <!-- ==================== كود إعلانات Adsterra بالكامل ==================== -->
+    
+    <!-- 1. كود إعلان Popunder -->
+    <script src="https://pl29597958.effectivecpmnetwork.com/0c/4d/9b/0c4d9bf0908234168a430cb1f224cff9.js"></script>
+
+    <!-- 2. كود إعلان البانر المدمج (Native Banner) -->
+    <script async="async" data-cfasync="false" src="https://pl29597973.effectivecpmnetwork.com/cdc5aaaa55bb9c8fd8f3b8faf2a84143/invoke.js"></script>
+
+    <!-- 3. كود إعلان الشريط الاجتماعي (Social Bar) -->
+    <script src="https://pl29597974.effectivecpmnetwork.com/37/c6/2a/37c62a0a02f5146b2b07ba20d3f0449c.js"></script>
 
 </body>
 </html>
