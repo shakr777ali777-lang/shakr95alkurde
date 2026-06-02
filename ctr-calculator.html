@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>حاسبة نسبة التفاعل والنقر CTR | منصة شاكر الكردي</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { background: #0a0a0a; color: #fff; font-family: 'Tajawal', sans-serif; padding: 2rem 1.5rem; text-align: center; }
+        .tool-box { max-width: 500px; margin: 0 auto; background: #151515; padding: 2.5rem; border-radius: 24px; border: 1px solid rgba(212, 175, 55, 0.2); }
+        h1 { color: #d4af37; font-size: 1.8rem; margin-bottom: 1.5rem; }
+        input { width: 100%; padding: 0.8rem; margin: 0.5rem 0 1.5rem 0; border-radius: 12px; border: 1px solid #333; background: #222; color: #fff; text-align: center; font-size: 1.1rem; }
+        button { width: 100%; padding: 1rem; background: linear-gradient(135deg, #9c7c1a 0%, #d4af37 100%); border: none; color: #0a0a0a; font-weight: 900; border-radius: 12px; cursor: pointer; font-size: 1.1rem; }
+        .result { margin-top: 1.5rem; font-size: 1.3rem; color: #fff; display: none; background: rgba(212, 175, 55, 0.1); padding: 1rem; border-radius: 12px; }
+    </style>
+</head>
+<body>
+    <div class="tool-box">
+        <h1>📊 حاسبة نسبة النقر والتفاعل (CTR)</h1>
+        <p style="color: #b8b8b8; font-size: 0.95rem; margin-bottom: 1.5rem;">احسب قوة انتشار فيديوهاتك أو روابطك التسويقية بسهولة</p>
+        
+        <label>عدد النقاط أو الضغطات:</label>
+        <input type="number" id="clicks" placeholder="مثال: 500">
+        
+        <label>إجمالي عدد الظهور أو المشاهدات:</label>
+        <input type="number" id="impressions" placeholder="مثال: 10000">
+        
+        <button onclick="calculateCTR()">احسب النسبة الآن</button>
+        
+        <div class="result" id="ctrResult">
+            نسبة النقر والتفاعل هي: <strong id="ctrText" style="color: #d4af37;">0%</strong>
+        </div>
+        <br><br>
+        <a href="index.html" style="color: #d4af37; text-decoration: none; font-size: 0.9rem;">العودة للرئيسية</a>
+    </div>
+
+    <script>
+        function calculateCTR() {
+            let clicks = document.getElementById('clicks').value;
+            let impressions = document.getElementById('impressions').value;
+            if(clicks > 0 && impressions > 0) {
+                let ctr = (clicks / impressions) * 100;
+                document.getElementById('ctrText').innerText = ctr.toFixed(2) + "%";
+                document.getElementById('ctrResult').style.display = 'block';
+            } else {
+                alert("الرجاء إدخال أرقام صحيحة");
+            }
+        }
+    </script>
+</body>
+</html>
