@@ -4,490 +4,260 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- كود إعلانات جوجل أدسنس التلقائية -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
-    
-    <!-- كود تحقق جوجل -->
-    <meta name="google-site-verification" content="QeHrlPO6cc8F3N-Wrg69_Db53_t1N16dFG9HqXEvv5c" />
-    
-    <title>شاكر الكردي | منصة الثراء الرقمي</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <!-- الكلمات المفتاحية والـ SEO لتصدر نتائج بحث جوجل -->
+    <title>منصة شاكر الكردي | دليل الربح من النت والعمل الحر والتداول</title>
+    <meta name="keywords" content="ربح من النت, ربح فلوس, كيف تجيب فلوس من النت, الربح من الانترنت للمبتدئين, الربح من الهاتف, تداول, عروض تيمو, سويت كوين, العمل الحر عبر الهاتف, منصة شاكر الكردي, مواقع صادقة لربح المال, شغل أونلاين, استثمار الأموال, تداول العملات">
+    <meta name="description" content="منصة شاكر الكردي دليلك الشامل لتعلم الربح من النت والعمل الحر عبر الهاتف. نقدم شروحات لتطبيقات صادقة، عروض تيمو، استراتيجيات التداول، وطرق كسب فلوس أونلاين للمبتدئين من الصفر.">
+    <meta name="robots" content="index, follow">
+
+    <!-- الخطوط والأيقونات -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+
     <style>
         :root {
-            --gold: #d4af37;
-            --gold-light: #f9d423;
-            --gold-dark: #9c7c1a;
-            --black-rich: #0a0a0a;
-            --black-soft: #111111;
+            --bg-color: #0a0a0a;
             --card-bg: #151515;
-            --text-white: #ffffff;
-            --text-gray: #b8b8b8;
-            --success: #00d26a;
-            --whatsapp-color: #25D366;
+            --accent-gold: #d4af37;
+            --text-main: #ffffff;
+            --text-muted: #b8b8b8;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
-        
-        body { 
-            background: var(--black-rich); 
-            color: var(--text-white); 
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
 
-        /* تأثير الذهب المتساقط */
-        .gold-particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Tajawal', sans-serif;
+            line-height: 1.6;
+            padding-bottom: 60px;
         }
 
-        .gold-coin {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: radial-gradient(circle, var(--gold-light), var(--gold-dark));
-            border-radius: 50%;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
-            animation: goldFall linear infinite;
-            opacity: 0.7;
-        }
-
-        @keyframes goldFall {
-            0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.7; }
-            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
-        }
-
-        .gold-coin:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
-        .gold-coin:nth-child(2) { left: 30%; animation-duration: 10s; animation-delay: 2s; }
-        .gold-coin:nth-child(3) { left: 50%; animation-duration: 7s; animation-delay: 4s; }
-        .gold-coin:nth-child(4) { left: 70%; animation-duration: 9s; animation-delay: 1s; }
-        .gold-coin:nth-child(5) { left: 90%; animation-duration: 11s; animation-delay: 3s; }
-
-        /* الهيدر */
         header {
-            padding: 5rem 1.5rem 4rem;
             text-align: center;
-            position: relative;
-            background: linear-gradient(180deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.7) 100%);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            z-index: 10;
+            padding: 4rem 1rem 2rem 1rem;
+            background: linear-gradient(to bottom, #111 0%, #0a0a0a 100%);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
         }
 
-        .badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-            color: var(--black-rich);
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-        }
-
-        .premium-name {
-            font-size: clamp(3rem, 8vw, 5rem);
+        header h1 {
+            font-size: 2.5rem;
             font-weight: 900;
-            background: linear-gradient(135deg, #f9d423 0%, #d4af37 25%, #f9d423 50%, #d4af37 75%, #f9d423 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: goldShine 3s linear infinite;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 80px rgba(212, 175, 55, 0.3);
+            color: var(--accent-gold);
+            margin-bottom: 0.5rem;
+            letter-spacing: -1px;
         }
 
-        @keyframes goldShine {
-            to { background-position: 200% center; }
-        }
-
-        .subtitle {
-            color: var(--text-gray);
-            font-size: 1.2rem;
-            font-weight: 500;
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
             max-width: 600px;
             margin: 0 auto;
-            line-height: 1.8;
         }
 
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--gold);
-            display: block;
-        }
-
-        .stat-label {
-            color: var(--text-gray);
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }
-
-        /* المحتوى */
         .container {
-            max-width: 1300px;
-            margin: 4rem auto;
+            max-width: 1200px;
+            margin: 2rem auto;
             padding: 0 1.5rem;
-            position: relative;
-            z-index: 10;
         }
 
-        .section-title {
+        .seo-intro {
             text-align: center;
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            color: var(--text-white);
-        }
-
-        .section-title span {
-            color: var(--gold);
-        }
-
-        .section-desc {
-            text-align: center;
-            color: var(--text-gray);
             margin-bottom: 3rem;
-            font-size: 1.1rem;
+            background: rgba(212, 175, 55, 0.05);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border: 1px solid rgba(212, 175, 55, 0.1);
+        }
+
+        .seo-intro p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
         }
 
         .card {
-            background: var(--card-bg);
+            background-color: var(--card-bg);
             border-radius: 24px;
             overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 1px solid rgba(212, 175, 55, 0.15);
-            text-decoration: none;
-            display: block;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
-            transform: scaleX(0);
-            transition: transform 0.4s;
-        }
-
-        .card:hover::before {
-            transform: scaleX(1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
-            transform: translateY(-12px);
-            border-color: var(--gold);
-            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
-        }
-
-        .card-image {
-            width: 100%;
-            height: 220px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .card-image::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 60%;
-            background: linear-gradient(180deg, transparent, var(--card-bg));
+            transform: translateY(-8px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.15);
         }
 
         .card-content {
             padding: 2rem;
-            position: relative;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
-        .card-tag {
-            display: inline-block;
-            background: rgba(212, 175, 55, 0.15);
-            color: var(--gold);
-            padding: 0.4rem 1rem;
-            border-radius: 8px;
-            font-size: 0.8rem;
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 1.5rem;
+        }
+
+        .card h2 {
+            font-size: 1.4rem;
             font-weight: 700;
             margin-bottom: 1rem;
+            color: var(--text-main);
         }
 
-        .card-tag-whatsapp {
-            background: rgba(37, 211, 102, 0.15);
-            color: var(--whatsapp-color);
-        }
-
-        .card-title {
-            font-size: 1.4rem;
-            font-weight: 800;
-            margin-bottom: 0.8rem;
-            color: var(--text-white);
-            line-height: 1.4;
-        }
-
-        .card-desc {
+        .card p {
+            color: var(--text-muted);
             font-size: 0.95rem;
-            color: var(--text-gray);
             margin-bottom: 1.5rem;
-            line-height: 1.6;
+            flex-grow: 1;
         }
 
-        .card-subtext {
-            display: block;
-            font-size: 0.8rem;
-            color: #888888;
-            margin-top: -1rem;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-
-        .btn {
-            display: flex;
+        .card-btn {
+            display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            width: 100%;
-            padding: 1rem;
-            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
-            color: var(--black-rich);
-            border-radius: 14px;
-            font-weight: 800;
+            padding: 0.8rem 1.5rem;
+            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
+            color: var(--accent-gold);
             text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s;
-            border: none;
+            font-weight: 700;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            transition: 0.3s;
         }
 
-        .btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
-        }
-
-        .btn-whatsapp {
-            background: linear-gradient(135deg, #128C7E 0%, var(--whatsapp-color) 100%);
-            color: white;
-        }
-
-        .btn-whatsapp:hover {
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        .card:hover .card-btn {
+            background: linear-gradient(135deg, #9c7c1a 0%, #d4af37 100%);
+            color: #0a0a0a;
+            border-color: transparent;
         }
 
         footer {
             text-align: center;
-            padding: 4rem 1.5rem;
-            margin-top: 5rem;
+            padding: 3rem 1rem;
+            margin-top: 4rem;
             border-top: 1px solid rgba(212, 175, 55, 0.1);
-            background: var(--black-soft);
-        }
-
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
         }
 
         .footer-links {
-            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
         }
 
         .footer-links a {
-            color: var(--text-gray);
+            color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s;
+            transition: 0.3s;
         }
 
         .footer-links a:hover {
-            color: var(--gold);
+            color: var(--accent-gold);
         }
 
         @media (max-width: 768px) {
-            .stats { gap: 2rem; }
-            .stat-number { font-size: 2rem; }
+            header h1 { font-size: 2rem; }
             .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <div class="gold-particles">
-        <div class="gold-coin"></div>
-        <div class="gold-coin"></div>
-        <div class="gold-coin"></div>
-        <div class="gold-coin"></div>
-        <div class="gold-coin"></div>
-    </div>
-
     <header>
-        <div class="badge">
-            <i class="fas fa-crown"></i> منصة موثوقة 100%
-        </div>
-        <h1 class="premium-name">شــاكر الكــردي</h1>
-        <p class="subtitle">خبير الاستراتيجيات الرقمية | أدوات وشروحات حصرية لمساعدتك في بناء مصادر دخلك الذكي</p>
-        
-        <div class="stats">
-            <div class="stat-item">
-                <span class="stat-number">50K+</span>
-                <span class="stat-label">متابع مستفيد</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">100%</span>
-                <span class="stat-label">طرق مجربة وآمنة</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">4.9★</span>
-                <span class="stat-label">تقييم الأدوات</span>
-            </div>
-        </div>
+        <h1>منصة شاكر الكردي الرقمية</h1>
+        <p>بوابتك الموثوقة لتعلم استراتيجيات العمل الذكي والشروحات التقنية المبسطة</p>
     </header>
 
     <div class="container">
-        <h2 class="section-title">أحدث <span>الشروحات والأدوات</span></h2>
-        <p class="section-desc">اختر الدليل التعليمي المناسب وابدأ في تطبيق الاستراتيجيات اليوم</p>
         
+        <!-- مقدمة نصية غنية بالكلمات الدلالية لجوجل -->
+        <div class="seo-intro">
+            <p>إذا كنت تبحث عن طرق حقيقية من أجل <strong>الربح من النت</strong> وتجميع <strong>ربح فلوس</strong> إضافية عبر الهاتف، فإننا نوفر لك أدلة تفصيلية صادقة مخصصة للمبتدئين. تصفح المراجعات أدناه لتتعلم كيفية استغلال التطبيقات بالشكل الصحيح والآمن لبدء رحلتك في العمل الرقمي واستكشاف مجالات الـ <strong>تداول</strong> والخدمات المصغرة.</p>
+        </div>
+
         <div class="grid">
-            
-            <!-- تم تعديل الرابط ليفتح صفحة المقال الداخلي -->
-            <a href="article-tasks.html" class="card">
-                <div class="card-image" style="background-image: url('IMG_3253.jpeg');"></div>
-                <div class="card-content">
-                    <div class="card-tag">دليل تعليمي</div>
-                    <h2 class="card-title">شرح استراتيجية تنفيذ المهام الرقمية المصغرة</h2>
-                    <p class="card-desc">تعرف على أفضل المنصات العالمية الصادقة لتنفيذ المهام وسحب الأرباح بسهولة عبر PayPal.</p>
-                    <div class="btn">
-                        <i class="fas fa-book-open"></i>
-                        اقرأ الشرح الكامل
-                    </div>
-                </div>
-            </a>
 
-            <!-- تم تعديل الرابط ليفتح صفحة المقال الداخلي -->
-            <a href="article-freelance.html" class="card">
-                <div class="card-image" style="background-image: url('IMG_3273.jpeg');"></div>
+            <!-- كارت تيمو -->
+            <div class="card">
                 <div class="card-content">
-                    <div class="card-tag">استراتيجية حصرية</div>
-                    <h2 class="card-title">دليل العمل الحر عبر الهاتف للمبتدئين</h2>
-                    <p class="card-desc">خطوات عملية واضحة لبدء تقديم الخدمات المصغرة بدون خبرة سابقة باستخدام الجوال فقط.</p>
-                    <div class="btn">
-                        <i class="fas fa-bolt"></i>
-                        عرض تفاصيل الاستراتيجية
-                    </div>
+                    <div class="card-icon"><i class="fas fa-gift"></i></div>
+                    <h2>عروض وقوالب مكافآت تيمو</h2>
+                    <p>شرح تفصيلي حول كيفية الاستفادة من قوالب مكافآت تيمو وتفعيل كود الخصم الحصري للحصول على أفضل الهدايا والتسوق الذكي.</p>
+                    <a href="temu.html" class="card-btn">عرض الشرح الكامل <i class="fas fa-chevron-left"></i></a>
                 </div>
-            </a>
-            
-            <a href="https://whatsapp.com/channel/0029VbChT0u0rGiI9fLBR11q" class="card" target="_blank">
-                <div class="card-image" style="background-image: url('IMG_3372.jpeg');"></div>
-                <div class="card-content">
-                    <div class="card-tag card-tag-whatsapp">قناة رسمية</div>
-                    <h2 class="card-title">مجتمعنا على الواتساب</h2>
-                    <p class="card-desc">انضم إلى مجتمعنا الرسمي لتلقي تحديثات البرامج، الشروحات الجديدة، والنصائح التقنية أولاً بأول.</p>
-                    <span class="card-subtext">نقوم بنشر شروحات يومية حصرية هنا</span>
-                    <div class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                        انضم للقناة الآن
-                    </div>
-                </div>
-            </a>
-            
-            <!-- تم تعديل الرابط ليفتح صفحة المقال الداخلي -->
-            <a href="sweatcoin.html" class="card">
-                <div class="card-image" style="background-image: url('IMG_3361.jpeg');"></div>
-                <div class="card-content">
-                    <div class="card-tag">الأكثر طلباً</div>
-                    <h2 class="card-title">مراجعة وشرح تطبيق المشي وتفعيل الأرباح</h2>
-                    <p class="card-desc">كيف يعمل تطبيق المشي الشهير؟ دليل شامل لتحويل الخطوات اليومية إلى مكافآت وسحبها بنجاح.</p>
-                    <div class="btn">
-                        <i class="fas fa-download"></i>
-                        اقرأ دليل التحميل والشرح
-                    </div>
-                </div>
-            </a>
+            </div>
 
-            <!-- تم تعديل الرابط ليفتح صفحة المقال الداخلي -->
-            <a href="temu.html" class="card">
-                <div class="card-image" style="background-image: url('IMG_3288.jpeg');"></div>
+            <!-- كارت تطبيق المشي -->
+            <div class="card">
                 <div class="card-content">
-                    <div class="card-tag">توفير ذكي</div>
-                    <h2 class="card-title">طريقة الحصول على عروض وهدايا تيمو مجاناً</h2>
-                    <p class="card-desc">شرح استراتيجية الاستفادة من قوالب المكافآت داخل تطبيق تيمو والحصول على منتجات بدون تكلفة.</p>
-                    <div class="btn">
-                        <i class="fas fa-gift"></i>
-                        تابع طريقة التفعيل
-                    </div>
+                    <div class="card-icon"><i class="fas fa-shoe-prints"></i></div>
+                    <h2>شرح تطبيق المشي Sweatcoin</h2>
+                    <p>تعرف على الحقيقة الكاملة وراء تطبيق سويت كوين، واستراتيجية تجميع النقاط وتحويلها إلى مكافآت وعوائد حقيقية عبر الهاتف.</p>
+                    <a href="sweatcoin.html" class="card-btn">عرض الشرح الكامل <i class="fas fa-chevron-left"></i></a>
                 </div>
-            </a>
+            </div>
 
-            <!-- تم تعديل الرابط ليفتح صفحة المقال الداخلي -->
-            <a href="article-daily.html" class="card">
-                <div class="card-image" style="background-image: url('IMG_3857.jpeg');"></div>
+            <!-- كارت المهام الرقمية -->
+            <div class="card">
                 <div class="card-content">
-                    <div class="card-tag">فرصة جديدة</div>
-                    <h2 class="card-title">استراتيجية العائد اليومي التراكمي المستقر</h2>
-                    <p class="card-desc">دليل مبسط لشرح التطبيقات والمنصات التفاعلية التي تمنح جوائز يومية مقابل التفاعل.</p>
-                    <div class="btn">
-                        <i class="fas fa-dollar-sign"></i>
-                        تصفح الدليل الشامل
-                    </div>
+                    <div class="card-icon"><i class="fas fa-tasks"></i></div>
+                    <h2>تنفيذ المهام الرقمية المصغرة</h2>
+                    <p>أفضل المواقع الصادقة التي تتيح للمبتدئين كسب المال من الإنترنت عبر إكمال مهام بسيطة كاستطلاعات الرأي وتقييم التطبيقات.</p>
+                    <a href="article-tasks.html" class="card-btn">عرض الشرح الكامل <i class="fas fa-chevron-left"></i></a>
                 </div>
-            </a>
+            </div>
+
+            <!-- كارت العمل الحر عبر الهاتف -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h2>دليل العمل الحر عبر الهاتف</h2>
+                    <p>كيف تستخدم جوالك كأداة إنتاجية لتقديم خدمات رقمية مصغرة في كتابة النصوص والتصميم بدون الحاجة لخبرات معقدة.</p>
+                    <a href="article-freelance.html" class="card-btn">عرض الشرح الكامل <i class="fas fa-chevron-left"></i></a>
+                </div>
+            </div>
+
+            <!-- كارت العائد اليومي والتدوال -->
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                    <h2>استراتيجية العائد اليومي والتداول</h2>
+                    <p>نظرة عامة ومبسطة حول أساسيات فهم أسواق تداول العملات الرقمية والمنصات التفاعلية الموثوقة لتأمين عوائد تراكمية مستقرة.</p>
+                    <a href="article-daily.html" class="card-btn">عرض الشرح الكامل <i class="fas fa-chevron-left"></i></a>
+                </div>
+            </div>
 
         </div>
     </div>
 
     <footer>
-        <div class="footer-logo">شاكر الكردي</div>
-        <p style="color: var(--text-gray); margin-bottom: 1rem;">منصة الثراء الرقمي الأولى عربياً</p>
-        <p style="color: #64748b; font-size: 0.9rem;">جميع الحقوق محفوظة &copy; 2026</p>
-        
-        <!-- روابط الصفحات الإلزامية لقبول أدسنس -->
         <div class="footer-links">
+            <a href="about-us.html">من نحن</a>
             <a href="privacy-policy.html">سياسة الخصوصية</a>
             <a href="terms.html">شروط الاستخدام</a>
-            <a href="about-us.html">من نحن</a>
         </div>
+        <p>جميع الحقوق محفوظة © منصة شاكر الكردي 2026</p>
     </footer>
 
 </body>
