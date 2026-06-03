@@ -1,423 +1,466 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl" id="htmlPage">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- تهيئة الـ SEO المتكامل للغتين -->
-    <title id="metaTitle">منصة شاكر الكردي | دليل الربح من النت وفحص الحسابات والتداول</title>
-    <meta name="keywords" content="ربح من النت, ربح فلوس, الربح من الانترنت للمبتدئين, تداول, عروض تيمو, سويت كوين, حل مشكلة صفر مشاهدات, فك حظر تيك توك, منصة شاكر الكردي, TikTok shadowban checker, shadowban fix, earn money online, make money from phone, TikTok RPM calculator, sweatcoin tutorial">
-    <meta name="description" id="metaDesc" content="منصة شاكر الكردي دليلك الشامل لتعلم الربح من النت والعمل الحر عبر الهاتف وفحص الحسابات. نقدم شروحات لتطبيقات صادقة، عروض تيمو، استراتيجيات التداول، وأدوات تفاعلية للمبتدئين.">
-    <meta name="robots" content="index, follow">
-
-    <!-- الخطوط والأيقونات -->
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700;900&family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- كود تحقق جوجل الجديد والمحدث -->
+    <meta name="google-site-verification" content="QeHrlPO6cc8F3N-Wrg69_Db53_t1N16dFG9HqXEvv5c" />
+    
+    <title>شاكر الكردي | منصة الثراء الرقمي</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    
     <style>
         :root {
-            --bg-color: #0a0a0a;
+            --gold: #d4af37;
+            --gold-light: #f9d423;
+            --gold-dark: #9c7c1a;
+            --black-rich: #0a0a0a;
+            --black-soft: #111111;
             --card-bg: #151515;
-            --accent-gold: #d4af37;
-            --text-main: #ffffff;
-            --text-muted: #b8b8b8;
+            --text-white: #ffffff;
+            --text-gray: #b8b8b8;
+            --success: #00d26a;
+            --whatsapp-color: #25D366;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
+        
+        body { 
+            background: var(--black-rich); 
+            color: var(--text-white); 
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
         }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Tajawal', 'Poppins', sans-serif;
-            line-height: 1.6;
-            padding-bottom: 60px;
+        /* تأثير الذهب المتساقط */
+        .gold-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
         }
 
-        /* شريط تبديل اللغة العلوي */
-        .lang-bar {
-            background: #111;
-            padding: 0.6rem 1.5rem;
-            display: flex;
-            justify-content: flex-end;
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+        .gold-coin {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: radial-gradient(circle, var(--gold-light), var(--gold-dark));
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+            animation: goldFall linear infinite;
+            opacity: 0.7;
         }
 
-        .lang-btn {
-            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
-            color: var(--accent-gold);
-            border: 1px solid rgba(212, 175, 55, 0.4);
-            padding: 0.4rem 1rem;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-            font-family: inherit;
-            transition: 0.3s;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+        @keyframes goldFall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.7; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
         }
 
-        .lang-btn:hover {
-            background: var(--accent-gold);
-            color: #0a0a0a;
-        }
+        .gold-coin:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
+        .gold-coin:nth-child(2) { left: 30%; animation-duration: 10s; animation-delay: 2s; }
+        .gold-coin:nth-child(3) { left: 50%; animation-duration: 7s; animation-delay: 4s; }
+        .gold-coin:nth-child(4) { left: 70%; animation-duration: 9s; animation-delay: 1s; }
+        .gold-coin:nth-child(5) { left: 90%; animation-duration: 11s; animation-delay: 3s; }
 
+        /* الهيدر */
         header {
+            padding: 5rem 1.5rem 4rem;
             text-align: center;
-            padding: 3rem 1rem 2rem 1rem;
-            background: linear-gradient(to bottom, #111 0%, #0a0a0a 100%);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+            position: relative;
+            background: linear-gradient(180deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.7) 100%);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+            z-index: 10;
         }
 
-        header h1 {
-            font-size: 2.5rem;
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+            color: var(--black-rich);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .premium-name {
+            font-size: clamp(3rem, 8vw, 5rem);
             font-weight: 900;
-            color: var(--accent-gold);
-            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #f9d423 0%, #d4af37 25%, #f9d423 50%, #d4af37 75%, #f9d423 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: goldShine 3s linear infinite;
+            margin-bottom: 1rem;
+            text-shadow: 0 0 80px rgba(212, 175, 55, 0.3);
         }
 
-        header p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
+        @keyframes goldShine {
+            to { background-position: 200% center; }
+        }
+
+        .subtitle {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+            font-weight: 500;
             max-width: 600px;
             margin: 0 auto;
+            line-height: 1.8;
         }
 
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1.5rem;
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
         }
 
-        .seo-intro {
+        .stat-item {
             text-align: center;
-            margin-bottom: 3rem;
-            background: rgba(212, 175, 55, 0.05);
-            padding: 1.5rem;
-            border-radius: 16px;
-            border: 1px solid rgba(212, 175, 55, 0.1);
         }
 
-        .seo-intro p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--gold);
+            display: block;
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+            margin-top: 0.5rem;
+        }
+
+        /* المحتوى */
+        .container {
+            max-width: 1300px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            color: var(--text-white);
+        }
+
+        .section-title span {
+            color: var(--gold);
+        }
+
+        .section-desc {
+            text-align: center;
+            color: var(--text-gray);
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
         .card {
-            background-color: var(--card-bg);
+            background: var(--card-bg);
             border-radius: 24px;
             overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 1px solid rgba(212, 175, 55, 0.15);
-            transition: all 0.4s ease;
-            display: flex;
-            flex-direction: column;
+            text-decoration: none;
+            display: block;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            transform: scaleX(0);
+            transition: transform 0.4s;
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
         }
 
         .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--accent-gold);
-            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.15);
+            transform: translateY(-12px);
+            border-color: var(--gold);
+            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 220px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .card-image::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60%;
+            background: linear-gradient(180deg, transparent, var(--card-bg));
         }
 
         .card-content {
             padding: 2rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
+            position: relative;
         }
 
-        .card-icon {
-            font-size: 2.5rem;
-            color: var(--accent-gold);
-            margin-bottom: 1.5rem;
-        }
-
-        .card h2 {
-            font-size: 1.4rem;
+        .card-tag {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--gold);
+            padding: 0.4rem 1rem;
+            border-radius: 8px;
+            font-size: 0.8rem;
             font-weight: 700;
             margin-bottom: 1rem;
-            color: var(--text-main);
         }
 
-        .card p {
-            color: var(--text-muted);
+        .card-tag-whatsapp {
+            background: rgba(37, 211, 102, 0.15);
+            color: var(--whatsapp-color);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            color: var(--text-white);
+            line-height: 1.4;
+        }
+
+        .card-desc {
             font-size: 0.95rem;
+            color: var(--text-gray);
             margin-bottom: 1.5rem;
-            flex-grow: 1;
+            line-height: 1.6;
         }
 
-        .card-btn {
-            display: inline-flex;
+        .card-subtext {
+            display: block;
+            font-size: 0.8rem;
+            color: #888888;
+            margin-top: -1rem;
+            margin-bottom: 1.5rem;
+            font-weight: 500;
+        }
+
+        .btn {
+            display: flex;
             align-items: center;
             justify-content: center;
             gap: 0.5rem;
-            padding: 0.8rem 1.5rem;
-            background: linear-gradient(135deg, #1a1a1a 0%, #252525 100%);
-            color: var(--accent-gold);
+            width: 100%;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
+            color: var(--black-rich);
+            border-radius: 14px;
+            font-weight: 800;
             text-decoration: none;
-            font-weight: 700;
-            border-radius: 12px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-            transition: 0.3s;
+            font-size: 1rem;
+            transition: all 0.3s;
+            border: none;
         }
 
-        .card:hover .card-btn {
-            background: linear-gradient(135deg, #9c7c1a 0%, #d4af37 100%);
-            color: #0a0a0a;
-            border-color: transparent;
+        .btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+        }
+
+        .btn-whatsapp {
+            background: linear-gradient(135deg, #128C7E 0%, var(--whatsapp-color) 100%);
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
         }
 
         footer {
             text-align: center;
-            padding: 3rem 1rem;
-            margin-top: 4rem;
+            padding: 4rem 1.5rem;
+            margin-top: 5rem;
             border-top: 1px solid rgba(212, 175, 55, 0.1);
-            color: var(--text-muted);
-            font-size: 0.9rem;
+            background: var(--black-soft);
         }
 
-        .footer-links {
-            margin-bottom: 1.5rem;
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .footer-links a {
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-gold);
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
         }
 
         @media (max-width: 768px) {
-            header h1 { font-size: 2rem; }
+            .stats { gap: 2rem; }
+            .stat-number { font-size: 2rem; }
             .grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <!-- شريط اللغة العلوي المستهدف -->
-    <div class="lang-bar">
-        <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">
-            <i class="fas fa-globe"></i> English
-        </button>
+    <div class="gold-particles">
+        <div class="gold-coin"></div>
+        <div class="gold-coin"></div>
+        <div class="gold-coin"></div>
+        <div class="gold-coin"></div>
+        <div class="gold-coin"></div>
     </div>
 
     <header>
-        <h1 id="mainTitle">منصة شاكر الكردي الرقمية</h1>
-        <p id="mainSubtitle">بوابتك الموثوقة لتعلم استراتيجيات العمل الذكي والشروحات التقنية واستخدام أدوات المحتوى</p>
+        <div class="badge">
+            <i class="fas fa-crown"></i> منصة موثوقة 100%
+        </div>
+        <h1 class="premium-name">شــاكر الكــردي</h1>
+        <p class="subtitle">خبير الربح من الإنترنت | أساعدك تبني دخلك الرقمي وتصل للحرية المالية</p>
+        
+        <div class="stats">
+            <div class="stat-item">
+                <span class="stat-number">50K+</span>
+                <span class="stat-label">عميل راضي</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">$2M+</span>
+                <span class="stat-label">أرباح المتابعين</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">4.9★</span>
+                <span class="stat-label">تقييم الخدمات</span>
+            </div>
+        </div>
     </header>
 
     <div class="container">
+        <h2 class="section-title">خدمات <span>الربح الحصري</span></h2>
+        <p class="section-desc">اختر الفرصة اللي تناسبك وابدأ رحلة الثراء اليوم</p>
         
-        <div class="seo-intro">
-            <p id="seoText">إذا كنت تبحث عن طرق حقيقية من أجل <strong>الربح من النت</strong> وتجميع <strong>ربح فلوس</strong> إضافية عبر الهاتف، فإننا نوفر لك أدلة تفصيلية صادقة مخصصة للمبتدئين. تصفح المراجعات واستخدم أدواتنا الذكية المحدثة لتتعلم كيفية فك حظر المشاهدات (الشدوبان)، حساب نسب النقر والتفاعل CTR، وزيادة عوائد الفيديوهات.</p>
-        </div>
-
         <div class="grid">
-
-            <!-- كارت أداة فحص الحساب -->
-            <div class="card" style="border-color: var(--accent-gold); background: linear-gradient(145deg, #151515 0%, #1a1505 100%);">
+            
+            <!-- رابط الـ 100$ الأول -->
+            <a href="https://os8.me/jwfWaF" class="card" target="_blank">
+                <div class="card-image" style="background-image: url('IMG_3253.jpeg');"></div>
                 <div class="card-content">
-                    <div class="card-icon" style="color: #ff4757;"><i class="fas fa-tools"></i></div>
-                    <h2 id="titleCard1">فاحص الحسابات وحل صفر مشاهدات</h2>
-                    <p id="descCard1">أداة تفاعلية مجانية من منصة شاكر الكردي لفحص حالة حسابك برمجياً، حل مشاكل نقص التفاعل والشدوبان، وتطبيق استراتيجيات زيادة الأرباح فوراً.</p>
-                    <a href="shadowban-fix.html" class="card-btn" id="btnCard1" style="background: linear-gradient(135deg, #9c7c1a 0%, #d4af37 100%); color: #0a0a0a; border: none;">افتح الأداة المجانية الآن <i class="fas fa-fire"></i></a>
+                    <div class="card-tag">عرض محدود</div>
+                    <h2 class="card-title">اربح 100$ فوراً</h2>
+                    <p class="card-desc">طريقة مجربة ومضمونة. سحب فوري على PayPal خلال دقائق</p>
+                    <div class="btn">
+                        <i class="fas fa-rocket"></i>
+                        ابدأ الربح الآن
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <!-- كارت أداة حاسبة CTR -->
-            <div class="card">
+            <!-- رابط الـ 100$ الثاني -->
+            <a href="https://os8.me/3MWHRz" class="card" target="_blank">
+                <div class="card-image" style="background-image: url('IMG_3273.jpeg');"></div>
                 <div class="card-content">
-                    <div class="card-icon" style="color: #4cd137;"><i class="fas fa-chart-bar"></i></div>
-                    <h2 id="titleCard2">حاسبة نسبة النقر والتفاعل CTR</h2>
-                    <p id="descCard2">احسب قوة انتشار روابطك التسويقية وفيديوهاتك ونسبة النقر مقابل الظهور بدقة لتعزيز استراتيجيات الربح من الإنترنت والتسويق.</p>
-                    <a href="ctr-calculator.html" class="card-btn" id="btnCard2">افتح الحاسبة مجاناً <i class="fas fa-chevron-left"></i></a>
+                    <div class="card-tag">سريع</div>
+                    <h2 class="card-title">100$ في أقل من ساعة</h2>
+                    <p class="card-desc">استراتيجية حصرية ما تحتاج خبرة. فقط جوال وانترنت</p>
+                    <div class="btn">
+                        <i class="fas fa-bolt"></i>
+                        اضغط هنا للربح
+                    </div>
                 </div>
-            </div>
+            </a>
+            
+            <!-- رابط الواتساب -->
+            <a href="https://whatsapp.com/channel/0029VbChT0u0rGiI9fLBR11q" class="card" target="_blank">
+                <div class="card-image" style="background-image: url('IMG_3372.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag card-tag-whatsapp">قناة رسمية</div>
+                    <h2 class="card-title">رابط الواتساب</h2>
+                    <p class="card-desc">انضم إلى مجتمعنا الحصري على الواتساب لتلقي التحديثات والفرص أولاً بأول.</p>
+                    <span class="card-subtext">رح نزل كل شرح برامج ربح هون</span>
+                    <div class="btn btn-whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        انضم للقناة الآن
+                    </div>
+                </div>
+            </a>
+            
+            <!-- تطبيق المشي -->
+            <a href="https://swcapp.com/i/shakralkurde" class="card" target="_blank">
+                <div class="card-image" style="background-image: url('IMG_3361.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag">الأكثر طلباً</div>
+                    <h2 class="card-title">الربح من المشي فقط</h2>
+                    <p class="card-desc">حول خطواتك اليومية إلى دولارات حقيقية. آلاف المستخدمين يسحبون شهرياً</p>
+                    <div class="btn">
+                        <i class="fas fa-download"></i>
+                        حمل التطبيق وابدأ الآن
+                    </div>
+                </div>
+            </a>
 
-            <!-- كارت تيمو -->
-            <div class="card">
+            <!-- تيمو -->
+            <a href="https://temu.to/k/epv72au60x4" class="card" target="_blank">
+                <div class="card-image" style="background-image: url('IMG_3288.jpeg');"></div>
                 <div class="card-content">
-                    <div class="card-icon"><i class="fas fa-gift"></i></div>
-                    <h2 id="titleCard3">عروض وقوالب مكافآت تيمو</h2>
-                    <p id="descCard3">شرح تفصيلي حول كيفية الاستفادة من قوالب مكافآت تيمو وتفعيل كود الخصم الحصري للحصول على أفضل الهدايا والتسوق الذكي.</p>
-                    <a href="temu.html" class="card-btn" id="btnCard3">عرض الشرح الكامل <i class="fas fa-chevron-left"></i></a>
+                    <div class="card-tag">مجاني 100%</div>
+                    <h2 class="card-title">تيمو: منتجات بـ 0$</h2>
+                    <p class="card-desc">احصل على هدايا ومنتجات مجانية بدون دفع شحن. عرض خاص للمتابعين</p>
+                    <div class="btn">
+                        <i class="fas fa-gift"></i>
+                        تسوق الآن مجاناً
+                    </div>
                 </div>
-            </div>
+            </a>
 
-            <!-- كارت تطبيق المشي -->
-            <div class="card">
+            <!-- استراتيجية 10$ -->
+            <a href="https://getblock.me/u/27348334" class="card" target="_blank">
+                <div class="card-image" style="background-image: url('IMG_3857.jpeg');"></div>
                 <div class="card-content">
-                    <div class="card-icon"><i class="fas fa-shoe-prints"></i></div>
-                    <h2 id="titleCard4">شرح تطبيق المشي Sweatcoin</h2>
-                    <p id="descCard4">تعرف على الحقيقة الكاملة وراء تطبيق سويت كوين، واستراتيجية تجميع النقاط وتحويلها إلى مكافآت وعوائد حقيقية عبر الهاتف.</p>
-                    <a href="sweatcoin.html" class="card-btn" id="btnCard4">عرض الشرح الكامل <i class="fas fa-chevron-left"></i></a>
+                    <div class="card-tag">فرصة جديدة</div>
+                    <h2 class="card-title">ربح 10$ يومياً</h2>
+                    <p class="card-desc">استراتيجية مميزة وحصرية لربح 10 دولارات يومياً بشكل مضمون وسريع.</p>
+                    <div class="btn">
+                        <i class="fas fa-dollar-sign"></i>
+                        اضغط هنا وابدأ الربح اليوم
+                    </div>
                 </div>
-            </div>
-
-            <!-- كارت المهام الرقمية -->
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-icon"><i class="fas fa-tasks"></i></div>
-                    <h2 id="titleCard5">تنفيذ المهام الرقمية المصغرة</h2>
-                    <p id="descCard5">أفضل المواقع الصادقة التي تتيح للمبتدئين كسب المال من الإنترنت عبر إكمال مهام بسيطة كاستطلاعات الرأي وتقييم التطبيقات.</p>
-                    <a href="article-tasks.html" class="card-btn" id="btnCard5">عرض الشرح الكامل <i class="fas fa-chevron-left"></i></a>
-                </div>
-            </div>
-
-            <!-- كارت العمل الحر -->
-            <div class="card">
-                <div class="card-content">
-                    <div class="card-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h2 id="titleCard6">دليل العمل الحر عبر الهاتف</h2>
-                    <p id="descCard6">كيف تستخدم جوالك كأداة إنتاجية لتقديم خدمات رقمية مصغرة في كتابة النصوص والتصميم بدون الحاجة لخبرات معقدة.</p>
-                    <a href="article-freelance.html" class="card-btn" id="btnCard6">عرض الشرح الكامل <i class="fas fa-chevron-left"></i></a>
-                </div>
-            </div>
+            </a>
 
         </div>
     </div>
 
     <footer>
-        <div class="footer-links">
-            <a href="about-us.html" id="linkAbout">من نحن</a>
-            <a href="privacy-policy.html" id="linkPrivacy">سياسة الخصوصية</a>
-            <a href="terms.html" id="linkTerms">شروط الاستخدام</a>
-        </div>
-        <p id="footerCopy">جميع الحقوق محفوظة © منصة شاكر الكردي 2026</p>
+        <div class="footer-logo">شاكر الكردي</div>
+        <p style="color: var(--text-gray); margin-bottom: 1rem;">منصة الثراء الرقمي الأولى عربياً</p>
+        <p style="color: #64748b; font-size: 0.9rem;">جميع الحقوق محفوظة &copy; 2026</p>
     </footer>
 
-    <!-- سكريبت الترجمة الفوري الذكي -->
-    <script>
-        let currentLang = "ar";
-
-        const translations = {
-            en: {
-                dir: "ltr",
-                title: "Shaker Alkurde Platform | Earn Money Online & Account Tools",
-                metaDesc: "Shaker Alkurde platform is your ultimate guide to learn online monetization, freelance, and account analytics with free interactive tools.",
-                langBtn: "<i class='fas fa-globe'></i> العربية",
-                mainTitle: "Shaker Alkurde Digital Platform",
-                mainSubtitle: "Your trusted gateway to smart work strategies, tech tutorials, and content tools",
-                seoText: "If you are looking for legitimate ways to <strong>make money online</strong> and stack extra revenue using your phone, we provide honest step-by-step guides for beginners. Explore our updated smart tools to fix zero views filters (Shadowban), calculate CTR rates, and boost your video earnings.",
-                titleCard1: "Account Analyzer & Shadowban Fix",
-                descCard1: "A free interactive tool by Shaker Alkurde to scan your account algorithm, fix low engagement filters, and apply instant monetization strategies.",
-                btnCard1: "Open Free Tool Now <i class='fas fa-fire'></i>",
-                titleCard2: "CTR & Engagement Calculator",
-                descCard2: "Calculate your affiliate links and video click-through rates accurately to boost your online marketing conversion strategies.",
-                btnCard2: "Open Calculator Free <i class='fas fa-chevron-right'></i>",
-                titleCard3: "Temu Rewards & Coupons Guide",
-                descCard3: "A detailed breakdown on how to leverage Temu reward templates and activate exclusive promo codes for smart shopping.",
-                btnCard3: "View Full Guide <i class='fas fa-chevron-right'></i>",
-                titleCard4: "Sweatcoin App Full Tutorial",
-                descCard4: "Discover the complete truth behind Sweatcoin, point accumulation strategies, and how to cash out real rewards via your phone.",
-                btnCard4: "View Full Guide <i class='fas fa-chevron-right'></i>",
-                titleCard5: "Micro-Tasks Execution",
-                descCard5: "The most trusted websites that allow beginners to earn income by completing simple digital micro-tasks and surveys.",
-                btnCard5: "View Full Guide <i class='fas fa-chevron-right'></i>",
-                titleCard6: "Mobile Freelancing Guide",
-                descCard6: "How to turn your smartphone into a high-productivity tool to offer copywriting and design services without complex experience.",
-                btnCard6: "View Full Guide <i class='fas fa-chevron-right'></i>",
-                linkAbout: "About Us",
-                linkPrivacy: "Privacy Policy",
-                linkTerms: "Terms of Use",
-                footerCopy: "All Rights Reserved © Shaker Alkurde Platform 2026"
-            },
-            ar: {
-                dir: "rtl",
-                title: "منصة شاكر الكردي | دليل الربح من النت وفحص الحسابات والتداول",
-                metaDesc: "منصة شاكر الكردي دليلك الشامل لتعلم الربح من النت والعمل الحر عبر الهاتف وفحص الحسابات. نقدم شروحات لتطبيقات صادقة، عروض تيمو، استراتيجيات التداول، وأدوات تفاعلية للمبتدئين.",
-                langBtn: "<i class='fas fa-globe'></i> English",
-                mainTitle: "منصة شاكر الكردي الرقمية",
-                mainSubtitle: "بوابتك الموثوقة لتعلم استراتيجيات العمل الذكي والشروحات التقنية واستخدام أدوات المحتوى",
-                seoText: "إذا كنت تبحث عن طرق حقيقية من أجل <strong>الربح من النت</strong> وتجميع <strong>ربح فلوس</strong> إضافية عبر الهاتف، فإننا نوفر لك أدلة تفصيلية صادقة مخصصة للمبتدئين. تصفح المراجعات واستخدم أدواتنا الذكية المحدثة لتتعلم كيفية فك حظر المشاهدات (الشدوبان)، حساب نسب النقر والتفاعل CTR، وزيادة عوائد الفيديوهات.",
-                titleCard1: "فاحص الحسابات وحل صفر مشاهدات",
-                descCard1: "أداة تفاعلية مجانية من منصة شاكر الكردي لفحص حالة حسابك برمجياً، حل مشاكل نقص التفاعل والشدوبان، وتطبيق استراتيجيات زيادة الأرباح فوراً.",
-                btnCard1: "افتح الأداة المجانية الآن <i class='fas fa-fire'></i>",
-                titleCard2: "حاسبة نسبة النقر والتفاعل CTR",
-                descCard2: "احسب قوة انتشار روابطك التسويقية وفيديوهاتك ونسبة النقر مقابل الظهور بدقة لتعزيز استراتيجيات الربح من الإنترنت والتسويق.",
-                btnCard2: "افتح الحاسبة مجاناً <i class='fas fa-chevron-left'></i>",
-                titleCard3: "عروض وقوالب مكافآت تيمو",
-                descCard3: "شرح تفصيلي حول كيفية الاستفادة من قوالب مكافآت تيمو وتفعيل كود الخصم الحصري للحصول على أفضل الهدايا والتسوق الذكي.",
-                btnCard3: "عرض الشرح الكامل <i class='fas fa-chevron-left'></i>",
-                titleCard4: "شرح تطبيق المشي Sweatcoin",
-                descCard4: "تعرف على الحقيقة الكاملة وراء تطبيق سويت كوين، واستراتيجية تجميع النقاط وتحويلها إلى مكافآت وعوائد حقيقية عبر الهاتف.",
-                btnCard4: "عرض الشرح الكامل <i class='fas fa-chevron-left'></i>",
-                titleCard5: "تنفيذ المهام الرقمية المصغرة",
-                descCard5: "أفضل المواقع الصادقة التي تتيح للمبتدئين كسب المال من الإنترنت عبر إكمال مهام بسيطة كاستطلاعات الرأي وتقييم التطبيقات.",
-                btnCard5: "عرض الشرح الكامل <i class='fas fa-chevron-left'></i>",
-                titleCard6: "دليل العمل الحر عبر الهاتف",
-                descCard6: "كيف تستخدم جوالك كأداة إنتاجية لتقديم خدمات رقمية مصغرة في كتابة النصوص والتصميم بدون الحاجة لخبرات معقدة.",
-                btnCard6: "عرض الشرح الكامل <i class='fas fa-chevron-left'></i>",
-                linkAbout: "من نحن",
-                linkPrivacy: "سياسة الخصوصية",
-                linkTerms: "شروط الاستخدام",
-                footerCopy: "جميع الحقوق محفوظة © منصة شاكر الكردي 2026"
-            }
-        };
-
-        function toggleLanguage() {
-            currentLang = currentLang === "ar" ? "en" : "ar";
-            const data = translations[currentLang];
-            
-            // تغيير اتجاه الصفحة والعناوين الرئيسية والفرعية
-            document.getElementById("htmlPage").setAttribute("dir", data.dir);
-            document.getElementById("htmlPage").setAttribute("lang", currentLang);
-            document.title = data.title;
-            document.getElementById("metaDesc").setAttribute("content", data.metaDesc);
-            document.getElementById("langBtn").innerHTML = data.langBtn;
-            document.getElementById("mainTitle").innerText = data.mainTitle;
-            document.getElementById("mainSubtitle").innerText = data.mainSubtitle;
-            document.getElementById("seoText").innerHTML = data.seoText;
-            
-            // تحديث محتوى الكروت
-            document.getElementById("titleCard1").innerText = data.titleCard1;
-            document.getElementById("descCard1").innerText = data.descCard1;
-            document.getElementById("btnCard1").innerHTML = data.btnCard1;
-            
-            document.getElementById("titleCard2").innerText = data.titleCard2;
-            document.getElementById("descCard2").innerText = data.descCard2;
-            document.getElementById("btnCard2").innerHTML = data.btnCard2;
-
-            document.getElementById("titleCard3").innerText = data.titleCard3;
-            document.getElementById("descCard3").innerText = data.descCard3;
-            document.getElementById("btnCard3").innerHTML = data.btnCard3;
-
-            document.getElementById("titleCard4").innerText = data.titleCard4;
-            document.getElementById("descCard4").innerText = data.descCard4;
-            document.getElementById("btnCard4").innerHTML = data.btnCard4;
-
-            document.getElementById("titleCard5").innerText = data.titleCard5;
-            document.getElementById("descCard5").innerText = data.descCard5;
-            document.getElementById("btnCard5").innerHTML = data.btnCard5;
-
-            document.getElementById("titleCard6").innerText = data.titleCard6;
-            document.getElementById("descCard6").innerText = data.descCard6;
-            document.getElementById("btnCard6").innerHTML = data.btnCard6;
-
-            // روابط الفوتر
-            document.getElementById("linkAbout").innerText = data.linkAbout;
-            document.getElementById("linkPrivacy").innerText = data.linkPrivacy;
-            document.getElementById("linkTerms").innerText = data.linkTerms;
-            document.getElementById("footerCopy").innerText = data.footerCopy;
-        }
-    </script>
 </body>
 </html>
