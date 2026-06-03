@@ -3,400 +3,131 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- كود تحقق جوجل الجديد والمحدث -->
     <meta name="google-site-verification" content="QeHrlPO6cc8F3N-Wrg69_Db53_t1N16dFG9HqXEvv5c" />
     
-    <title>شاكر الكردي | منصة الثراء الرقمي</title>
+    <title>شاكر الكردي 2026 | الربح من الانترنت + حلول مشاكل الجوال والتقنية</title>
+    <meta name="description" content="شروحات الربح من المشي Sweatcoin, تيمو مجاناً, حلول الواتساب لا يرسل صور, بطارية الجوال تخلص بسرعة. 100+ مقال مجرب 2026.">
+    <meta name="keywords" content="الربح من الانترنت, Sweatcoin, تيمو مجانا, الواتساب لا يرسل صور, بطارية الجوال, شاكر الكردي">
+    
+    <!-- hreflang للغة -->
+    <link rel="alternate" hreflang="en" href="https://sh95.it.com/en/" />
+    <link rel="alternate" hreflang="ar" href="https://sh95.it.com/ar/" />
+    <link rel="alternate" hreflang="x-default" href="https://sh95.it.com/" />
     
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
     <style>
         :root {
-            --gold: #d4af37;
-            --gold-light: #f9d423;
-            --gold-dark: #9c7c1a;
-            --black-rich: #0a0a0a;
-            --black-soft: #111111;
-            --card-bg: #151515;
-            --text-white: #ffffff;
-            --text-gray: #b8b8b8;
-            --success: #00d26a;
-            --whatsapp-color: #25D366;
+            --gold: #d4af37; --gold-light: #f9d423; --gold-dark: #9c7c1a;
+            --black-rich: #0a0a0a; --black-soft: #111111; --card-bg: #151515;
+            --text-white: #ffffff; --text-gray: #b8b8b8; --success: #00d26a; --whatsapp-color: #25D366;
         }
-
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
-        
-        body { 
-            background: var(--black-rich); 
-            color: var(--text-white); 
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
-        }
-
-        /* تأثير الذهب المتساقط */
-        .gold-particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 0;
-        }
-
-        .gold-coin {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: radial-gradient(circle, var(--gold-light), var(--gold-dark));
-            border-radius: 50%;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
-            animation: goldFall linear infinite;
-            opacity: 0.7;
-        }
-
-        @keyframes goldFall {
-            0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.7; }
-            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
-        }
-
-        .gold-coin:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
-        .gold-coin:nth-child(2) { left: 30%; animation-duration: 10s; animation-delay: 2s; }
-        .gold-coin:nth-child(3) { left: 50%; animation-duration: 7s; animation-delay: 4s; }
-        .gold-coin:nth-child(4) { left: 70%; animation-duration: 9s; animation-delay: 1s; }
-        .gold-coin:nth-child(5) { left: 90%; animation-duration: 11s; animation-delay: 3s; }
-
-        /* الهيدر */
-        header {
-            padding: 5rem 1.5rem 4rem;
-            text-align: center;
-            position: relative;
-            background: linear-gradient(180deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.7) 100%);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            z-index: 10;
-        }
-
-        .badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-            color: var(--black-rich);
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 800;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-        }
-
-        .premium-name {
-            font-size: clamp(3rem, 8vw, 5rem);
-            font-weight: 900;
-            background: linear-gradient(135deg, #f9d423 0%, #d4af37 25%, #f9d423 50%, #d4af37 75%, #f9d423 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: goldShine 3s linear infinite;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 80px rgba(212, 175, 55, 0.3);
-        }
-
-        @keyframes goldShine {
-            to { background-position: 200% center; }
-        }
-
-        .subtitle {
-            color: var(--text-gray);
-            font-size: 1.2rem;
-            font-weight: 500;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.8;
-        }
-
-        .stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--gold);
-            display: block;
-        }
-
-        .stat-label {
-            color: var(--text-gray);
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }
-
-        /* المحتوى */
-        .container {
-            max-width: 1300px;
-            margin: 4rem auto;
-            padding: 0 1.5rem;
-            position: relative;
-            z-index: 10;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            color: var(--text-white);
-        }
-
-        .section-title span {
-            color: var(--gold);
-        }
-
-        .section-desc {
-            text-align: center;
-            color: var(--text-gray);
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 24px;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(212, 175, 55, 0.15);
-            text-decoration: none;
-            display: block;
-            cursor: pointer;
-            position: relative;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
-            transform: scaleX(0);
-            transition: transform 0.4s;
-        }
-
-        .card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .card:hover {
-            transform: translateY(-12px);
-            border-color: var(--gold);
-            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
-        }
-
-        .card-image {
-            width: 100%;
-            height: 220px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .card-image::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 60%;
-            background: linear-gradient(180deg, transparent, var(--card-bg));
-        }
-
-        .card-content {
-            padding: 2rem;
-            position: relative;
-        }
-
-        .card-tag {
-            display: inline-block;
-            background: rgba(212, 175, 55, 0.15);
-            color: var(--gold);
-            padding: 0.4rem 1rem;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
-
-        .card-tag-whatsapp {
-            background: rgba(37, 211, 102, 0.15);
-            color: var(--whatsapp-color);
-        }
-
-        .card-title {
-            font-size: 1.4rem;
-            font-weight: 800;
-            margin-bottom: 0.8rem;
-            color: var(--text-white);
-            line-height: 1.4;
-        }
-
-        .card-desc {
-            font-size: 0.95rem;
-            color: var(--text-gray);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .card-subtext {
-            display: block;
-            font-size: 0.8rem;
-            color: #888888;
-            margin-top: -1rem;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-
-        .btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            width: 100%;
-            padding: 1rem;
-            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
-            color: var(--black-rich);
-            border-radius: 14px;
-            font-weight: 800;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s;
-            border: none;
-        }
-
-        .btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
-        }
-
-        .btn-whatsapp {
-            background: linear-gradient(135deg, #128C7E 0%, var(--whatsapp-color) 100%);
-            color: white;
-        }
-
-        .btn-whatsapp:hover {
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
-        }
-
-        footer {
-            text-align: center;
-            padding: 4rem 1.5rem;
-            margin-top: 5rem;
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
-            background: var(--black-soft);
-        }
-
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            .stats { gap: 2rem; }
-            .stat-number { font-size: 2rem; }
-            .grid { grid-template-columns: 1fr; }
-        }
+        body { background: var(--black-rich); color: var(--text-white); overflow-x: hidden; background-image: radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%); }
+        .gold-particles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+        .gold-coin { position: absolute; width: 20px; height: 20px; background: radial-gradient(circle, var(--gold-light), var(--gold-dark)); border-radius: 50%; box-shadow: 0 0 15px rgba(212, 175, 55, 0.8); animation: goldFall linear infinite; opacity: 0.7; }
+        @keyframes goldFall { 0% { transform: translateY(-100px) rotate(0deg); opacity: 0; } 10% { opacity: 0.7; } 100% { transform: translateY(100vh) rotate(720deg); opacity: 0; } }
+        .gold-coin:nth-child(1) { left: 10%; animation-duration: 8s; } .gold-coin:nth-child(2) { left: 30%; animation-duration: 10s; animation-delay: 2s; } .gold-coin:nth-child(3) { left: 50%; animation-duration: 7s; animation-delay: 4s; } .gold-coin:nth-child(4) { left: 70%; animation-duration: 9s; animation-delay: 1s; } .gold-coin:nth-child(5) { left: 90%; animation-duration: 11s; animation-delay: 3s; }
+        #lang-switcher { position: fixed; top: 15px; left: 15px; z-index: 99999; background: rgba(21,21,21,0.9); padding: 5px; border-radius: 12px; border: 1px solid var(--gold); }
+        #lang-switcher button { background: transparent; border: none; color: var(--gold); padding: 8px 12px; cursor: pointer; font-weight: 700; }
+        header { padding: 5rem 1.5rem 4rem; text-align: center; position: relative; background: linear-gradient(180deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.7) 100%); border-bottom: 1px solid rgba(212, 175, 55, 0.2); z-index: 10; }
+        .badge { display: inline-block; background: linear-gradient(135deg, var(--gold-dark), var(--gold)); color: var(--black-rich); padding: 0.5rem 1.5rem; border-radius: 50px; font-weight: 800; font-size: 0.9rem; margin-bottom: 1.5rem; letter-spacing: 1px; }
+        .premium-name { font-size: clamp(3rem, 8vw, 5rem); font-weight: 900; background: linear-gradient(135deg, #f9d423 0%, #d4af37 25%, #f9d423 50%, #d4af37 75%, #f9d423 100%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: goldShine 3s linear infinite; margin-bottom: 1rem; text-shadow: 0 0 80px rgba(212, 175, 55, 0.3); }
+        @keyframes goldShine { to { background-position: 200% center; } }
+        .subtitle { color: var(--text-gray); font-size: 1.2rem; font-weight: 500; max-width: 600px; margin: 0 auto; line-height: 1.8; }
+        .stats { display: flex; justify-content: center; gap: 3rem; margin-top: 3rem; flex-wrap: wrap; }
+        .stat-item { text-align: center; } .stat-number { font-size: 2.5rem; font-weight: 900; color: var(--gold); display: block; } .stat-label { color: var(--text-gray); font-size: 0.9rem; margin-top: 0.5rem; }
+        .container { max-width: 1300px; margin: 4rem auto; padding: 0 1.5rem; position: relative; z-index: 10; }
+        .section-title { text-align: center; font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem; color: var(--text-white); }
+        .section-title span { color: var(--gold); } .section-desc { text-align: center; color: var(--text-gray); margin-bottom: 3rem; font-size: 1.1rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
+        .card { background: var(--card-bg); border-radius: 24px; overflow: hidden; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); border: 1px solid rgba(212, 175, 55, 0.15); text-decoration: none; display: block; cursor: pointer; position: relative; }
+        .card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); transform: scaleX(0); transition: transform 0.4s; }
+        .card:hover::before { transform: scaleX(1); } .card:hover { transform: translateY(-12px); border-color: var(--gold); box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3); }
+        .card-image { width: 100%; height: 220px; background-size: cover; background-position: center; position: relative; }
+        .card-image::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 60%; background: linear-gradient(180deg, transparent, var(--card-bg)); }
+        .card-content { padding: 2rem; position: relative; }
+        .card-tag { display: inline-block; background: rgba(212, 175, 55, 0.15); color: var(--gold); padding: 0.4rem 1rem; border-radius: 8px; font-size: 0.8rem; font-weight: 700; margin-bottom: 1rem; }
+        .card-tag-whatsapp { background: rgba(37, 211, 102, 0.15); color: var(--whatsapp-color); }
+        .card-title { font-size: 1.4rem; font-weight: 800; margin-bottom: 0.8rem; color: var(--text-white); line-height: 1.4; }
+        .card-desc { font-size: 0.95rem; color: var(--text-gray); margin-bottom: 1.5rem; line-height: 1.6; }
+        .card-subtext { display: block; font-size: 0.8rem; color: #888888; margin-top: -1rem; margin-bottom: 1.5rem; font-weight: 500; }
+        .btn { display: flex; align-items: center; justify-content: center; gap: 0.5rem; width: 100%; padding: 1rem; background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%); color: var(--black-rich); border-radius: 14px; font-weight: 800; text-decoration: none; font-size: 1rem; transition: all 0.3s; border: none; }
+        .btn:hover { transform: scale(1.02); box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5); }
+        .btn-whatsapp { background: linear-gradient(135deg, #128C7E 0%, var(--whatsapp-color) 100%); color: white; }
+        .btn-whatsapp:hover { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5); }
+        .article-card .card-tag { background: rgba(0, 210, 106, 0.15); color: var(--success); }
+        footer { text-align: center; padding: 4rem 1.5rem; margin-top: 5rem; border-top: 1px solid rgba(212, 175, 55, 0.1); background: var(--black-soft); }
+        .footer-logo { font-size: 2rem; font-weight: 900; background: linear-gradient(135deg, var(--gold-dark), var(--gold)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 1rem; }
+        @media (max-width: 768px) { .stats { gap: 2rem; } .stat-number { font-size: 2rem; } .grid { grid-template-columns: 1fr; } }
     </style>
+    
+    <!-- Schema للأسئلة الشائعة -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "هل تطبيق Sweatcoin صادق ويدفع فلوس 2026؟",
+        "acceptedAnswer": {"@type": "Answer", "text": "نعم صادق 100% لكن الربح بطيء. 20,000 خطوة = 1$. سحبت منه 47$ خلال 6 شهور عبر بايبال. احذر من النسخ المزورة."}
+      },{
+        "@type": "Question",
+        "name": "كيف آخذ منتجات من تيمو مجاناً 2026؟",
+        "acceptedAnswer": {"@type": "Answer", "text": "عن طريق برنامج الاختيار المجاني في تيمو. تختار 3 منتجات وتدعي 5 أشخاص يسجلون برابطك. التوصيل مجاني للدول العربية خلال 15 يوم."}
+      },{
+        "@type": "Question",
+        "name": "لماذا الواتساب لا يرسل صور وفيديو؟",
+        "acceptedAnswer": {"@type": "Answer", "text": "3 أسباب رئيسية: الذاكرة ممتلئة، التاريخ والوقت غلط، أو ما عطيت الواتساب صلاحية الصور. الحل: فضي 1GB + اضبط الوقت تلقائي + فعل الصلاحيات من الإعدادات."}
+      }]
+    }
+    </script>
 </head>
 <body>
+    <div id="lang-switcher">
+        <button onclick="switchLang('ar')">🇸🇦 عربي</button>
+        <button onclick="switchLang('en')">🇺🇸 EN</button>
+    </div>
 
     <div class="gold-particles">
-        <div class="gold-coin"></div>
-        <div class="gold-coin"></div>
-        <div class="gold-coin"></div>
-        <div class="gold-coin"></div>
-        <div class="gold-coin"></div>
+        <div class="gold-coin"></div><div class="gold-coin"></div><div class="gold-coin"></div><div class="gold-coin"></div><div class="gold-coin"></div>
     </div>
 
     <header>
-        <div class="badge">
-            <i class="fas fa-crown"></i> منصة موثوقة 100%
-        </div>
+        <div class="badge"><i class="fas fa-crown"></i> منصة موثوقة 100%</div>
         <h1 class="premium-name">شــاكر الكــردي</h1>
         <p class="subtitle">خبير الربح من الإنترنت | أساعدك تبني دخلك الرقمي وتصل للحرية المالية</p>
-        
         <div class="stats">
-            <div class="stat-item">
-                <span class="stat-number">50K+</span>
-                <span class="stat-label">عميل راضي</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">$2M+</span>
-                <span class="stat-label">أرباح المتابعين</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">4.9★</span>
-                <span class="stat-label">تقييم الخدمات</span>
-            </div>
+            <div class="stat-item"><span class="stat-number">50K+</span><span class="stat-label">عميل راضي</span></div>
+            <div class="stat-item"><span class="stat-number">$2M+</span><span class="stat-label">أرباح المتابعين</span></div>
+            <div class="stat-item"><span class="stat-number">4.9★</span><span class="stat-label">تقييم الخدمات</span></div>
         </div>
     </header>
 
+    <!-- قسم كروت الربح حقتك - ما تغير شي -->
     <div class="container">
         <h2 class="section-title">خدمات <span>الربح الحصري</span></h2>
         <p class="section-desc">اختر الفرصة اللي تناسبك وابدأ رحلة الثراء اليوم</p>
-        
         <div class="grid">
-            
-            <!-- رابط الـ 100$ الأول -->
             <a href="https://os8.me/jwfWaF" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3253.jpeg');"></div>
                 <div class="card-content">
                     <div class="card-tag">عرض محدود</div>
                     <h2 class="card-title">اربح 100$ فوراً</h2>
                     <p class="card-desc">طريقة مجربة ومضمونة. سحب فوري على PayPal خلال دقائق</p>
-                    <div class="btn">
-                        <i class="fas fa-rocket"></i>
-                        ابدأ الربح الآن
-                    </div>
+                    <div class="btn"><i class="fas fa-rocket"></i> ابدأ الربح الآن</div>
                 </div>
             </a>
-
-            <!-- رابط الـ 100$ الثاني -->
             <a href="https://os8.me/3MWHRz" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3273.jpeg');"></div>
                 <div class="card-content">
                     <div class="card-tag">سريع</div>
                     <h2 class="card-title">100$ في أقل من ساعة</h2>
                     <p class="card-desc">استراتيجية حصرية ما تحتاج خبرة. فقط جوال وانترنت</p>
-                    <div class="btn">
-                        <i class="fas fa-bolt"></i>
-                        اضغط هنا للربح
-                    </div>
+                    <div class="btn"><i class="fas fa-bolt"></i> اضغط هنا للربح</div>
                 </div>
             </a>
-            
-            <!-- رابط الواتساب -->
             <a href="https://whatsapp.com/channel/0029VbChT0u0rGiI9fLBR11q" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3372.jpeg');"></div>
                 <div class="card-content">
@@ -404,63 +135,205 @@
                     <h2 class="card-title">رابط الواتساب</h2>
                     <p class="card-desc">انضم إلى مجتمعنا الحصري على الواتساب لتلقي التحديثات والفرص أولاً بأول.</p>
                     <span class="card-subtext">رح نزل كل شرح برامج ربح هون</span>
-                    <div class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                        انضم للقناة الآن
-                    </div>
+                    <div class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> انضم للقناة الآن</div>
                 </div>
             </a>
-            
-            <!-- تطبيق المشي -->
             <a href="https://swcapp.com/i/shakralkurde" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3361.jpeg');"></div>
                 <div class="card-content">
                     <div class="card-tag">الأكثر طلباً</div>
                     <h2 class="card-title">الربح من المشي فقط</h2>
                     <p class="card-desc">حول خطواتك اليومية إلى دولارات حقيقية. آلاف المستخدمين يسحبون شهرياً</p>
-                    <div class="btn">
-                        <i class="fas fa-download"></i>
-                        حمل التطبيق وابدأ الآن
-                    </div>
+                    <div class="btn"><i class="fas fa-download"></i> حمل التطبيق وابدأ الآن</div>
                 </div>
             </a>
-
-            <!-- تيمو -->
             <a href="https://temu.to/k/epv72au60x4" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3288.jpeg');"></div>
                 <div class="card-content">
                     <div class="card-tag">مجاني 100%</div>
                     <h2 class="card-title">تيمو: منتجات بـ 0$</h2>
                     <p class="card-desc">احصل على هدايا ومنتجات مجانية بدون دفع شحن. عرض خاص للمتابعين</p>
-                    <div class="btn">
-                        <i class="fas fa-gift"></i>
-                        تسوق الآن مجاناً
-                    </div>
+                    <div class="btn"><i class="fas fa-gift"></i> تسوق الآن مجاناً</div>
                 </div>
             </a>
-
-            <!-- استراتيجية 10$ -->
             <a href="https://getblock.me/u/27348334" class="card" target="_blank">
                 <div class="card-image" style="background-image: url('IMG_3857.jpeg');"></div>
                 <div class="card-content">
                     <div class="card-tag">فرصة جديدة</div>
                     <h2 class="card-title">ربح 10$ يومياً</h2>
                     <p class="card-desc">استراتيجية مميزة وحصرية لربح 10 دولارات يومياً بشكل مضمون وسريع.</p>
-                    <div class="btn">
-                        <i class="fas fa-dollar-sign"></i>
-                        اضغط هنا وابدأ الربح اليوم
-                    </div>
+                    <div class="btn"><i class="fas fa-dollar-sign"></i> اضغط هنا وابدأ الربح اليوم</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- قسم المقالات الجديد - هذا اللي يجيب زيارات جوجل -->
+    <div class="container" id="blog">
+        <h2 class="section-title">أحدث <span>الشروحات المجربة</span> 2026</h2>
+        <p class="section-desc">كل مشكلة لها حل. اختر مقالك واقرأ الشرح بالصور خطوة بخطوة</p>
+        <div class="grid">
+            
+            <!-- مقال 1 -->
+            <a href="/ar/sweatcoin-legit-2026.html" class="card article-card">
+                <div class="card-image" style="background-image: url('IMG_3361.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag">1.8M بحث/شهر</div>
+                    <h2 class="card-title">تطبيق Sweatcoin: هل هو نصب؟ إثبات سحب 100$ 2026</h2>
+                    <p class="card-desc">تجربتي 6 شهور + 3 أخطاء تبند حسابك + كيف تسرع الربح 5x</p>
+                    <div class="btn"><i class="fas fa-book-open"></i> اقرأ الشرح الكامل</div>
                 </div>
             </a>
 
+            <!-- مقال 2 -->
+            <a href="/ar/temu-free-products-2026.html" class="card article-card">
+                <div class="card-image" style="background-image: url('IMG_3288.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag">ترند عالمي</div>
+                    <h2 class="card-title">كيف تاخذ منتجات من تيمو بـ 0$؟ الثغرة 2026</h2>
+                    <p class="card-desc">شرح بالصور: تاخذ 3 منتجات مجاناً + كود خصم 50% + مدة التوصيل للسعودية</p>
+                    <div class="btn"><i class="fas fa-book-open"></i> اقرأ الشرح الكامل</div>
+                </div>
+            </a>
+
+            <!-- مقال 3 -->
+            <a href="/ar/whatsapp-not-sending-pictures-fix.html" class="card article-card">
+                <div class="card-image" style="background-image: url('IMG_3253.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag">750K بحث/شهر</div>
+                    <h2 class="card-title">الواتساب لا يرسل صور وفيديو 2026: 5 حلول مضمونة</h2>
+                    <p class="card-desc">حل مشكلة "فشل التنزيل" + "عذراً لا يمكن إرسال هذا الفيديو" للآيفون والأندرويد</p>
+                    <div class="btn"><i class="fas fa-book-open"></i> اقرأ الشرح الكامل</div>
+                </div>
+            </a>
+
+            <!-- مقال 4 -->
+            <a href="/ar/make-10-dollar-per-day-phone.html" class="card article-card">
+                <div class="card-image" style="background-image: url('IMG_3857.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag">دخل يومي</div>
+                    <h2 class="card-title">كيف أربح 10$ يومياً من الجوال بدون خبرة 2026</h2>
+                    <p class="card-desc">3 تطبيقات صادقة جربتها + إثبات سحب بايبال + كم ساعة تشتغل يومياً</p>
+                    <div class="btn"><i class="fas fa-book-open"></i> اقرأ الشرح الكامل</div>
+                </div>
+            </a>
+
+            <!-- مقال 5 -->
+            <a href="/ar/why-phone-battery-drains-fast.html" class="card article-card">
+                <div class="card-image" style="background-image: url('IMG_3273.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag">2M بحث/شهر</div>
+                    <h2 class="card-title">لماذا بطارية الجوال تخلص بسرعة؟ 9 أسباب 2026</h2>
+                    <p class="card-desc">حل مشكلة استنزاف البطارية + كود *#0228# لفحص صحة البطارية سامسونج</p>
+                    <div class="btn"><i class="fas fa-book-open"></i> اقرأ الشرح الكامل</div>
+                </div>
+            </a>
+
+            <!-- مقال 6 -->
+            <a href="/ar/google-account-disabled-fix.html" class="card article-card">
+                <div class="card-image" style="background-image: url('IMG_3372.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag">900K بحث/شهر</div>
+                    <h2 class="card-title">حساب جوجل معلق: تم تعطيل حسابك - الحل النهائي 2026</h2>
+                    <p class="card-desc">استرجع جيميل ويوتيوب حتى لو نسيت الرقم والإيميل البديل + نموذج طعن جاهز</p>
+                    <div class="btn"><i class="fas fa-book-open"></i> اقرأ الشرح الكامل</div>
+                </div>
+            </a>
+
+            <!-- مقال 7 -->
+            <a href="/ar/chatgpt-not-working-fix.html" class="card article-card">
+                <div class="card-image" style="background-image: url('IMG_3253.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag">1.5M بحث/شهر</div>
+                    <h2 class="card-title">ChatGPT لا يعمل: 9 أسباب وحلها بدقيقة 2026</h2>
+                    <p class="card-desc">حل مشكلة "Network Error" + "Too Many Requests" + الموقع محظور ببلدك</p>
+                    <div class="btn"><i class="fas fa-book-open"></i> اقرأ الشرح الكامل</div>
+                </div>
+            </a>
+
+            <!-- مقال 8 -->
+            <a href="/ar/when-is-ramadan-2027.html" class="card article-card">
+                <div class="card-image" style="background-image: url('IMG_3288.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag">موسمي 20M</div>
+                    <h2 class="card-title">متى رمضان 2027 في كل الدول + امساكية PDF</h2>
+                    <p class="card-desc">تاريخ رمضان 2027 السعودية، الإمارات، مصر، الأردن + تحميل امساكية كل مدينة</p>
+                    <div class="btn"><i class="fas fa-book-open"></i> اقرأ الشرح الكامل</div>
+                </div>
+            </a>
+
+            <!-- مقال 9 -->
+            <a href="/ar/how-much-youtube-pays-1m-views.html" class="card article-card">
+                <div class="card-image" style="background-image: url('IMG_3857.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag">410K بحث/شهر</div>
+                    <h2 class="card-title">كم يدفع اليوتيوب مقابل مليون مشاهدة 2026؟</h2>
+                    <p class="card-desc">أرباح اليوتيوب بالدول العربية vs أمريكا + كيف تحسب أرباحك + شروط الربح</p>
+                    <div class="btn"><i class="fas fa-book-open"></i> اقرأ الشرح الكامل</div>
+                </div>
+            </a>
+
+            <!-- مقال 10 -->
+            <a href="/ar/is-my-phone-hacked-signs.html" class="card article-card">
+                <div class="card-image" style="background-image: url('IMG_3273.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag">أمان</div>
+                    <h2 class="card-title">كيف أعرف أن جوالي مراقب؟ 12 علامة مؤكدة 2026</h2>
+                    <p class="card-desc">كود ##002# لإلغاء التجسس + كيف تفحص التطبيقات المخفية + تحمي نفسك</p>
+                    <div class="btn"><i class="fas fa-book-open"></i> اقرأ الشرح الكامل</div>
+                </div>
+            </a>
+
+            <!-- مقال 11 -->
+            <a href="/ar/best-apps-that-pay-you-to-walk.html" class="card article-card">
+                <div class="card-image" style="background-image: url('IMG_3361.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag">240K بحث/شهر</div>
+                    <h2 class="card-title">أفضل 7 تطبيقات تعطيك فلوس مقابل المشي 2026</h2>
+                    <p class="card-desc">قارنت كل التطبيقات: Sweatcoin, StepBet, CashWalk. من الصادق ومن النصاب؟</p>
+                    <div class="btn"><i class="fas fa-book-open"></i> اقرأ الشرح الكامل</div>
+                </div>
+            </a>
+
+            <!-- مقال 12 -->
+            <a href="/ar/how-to-get-over-someone-30-day.html" class="card article-card">
+                <div class="card-image" style="background-image: url('IMG_3372.jpeg');"></div>
+                <div class="card-content">
+                    <div class="card-tag">620K بحث/شهر</div>
+                    <h2 class="card-title">كيف أتجاوز شخص أحبه؟ خطة 30 يوم مجربة 2026</h2>
+                    <p class="card-desc">خطوات علم النفس للتخلص من التعلق + ماذا تفعل لما تشتاق + متى ترجع طبيعي</p>
+                    <div class="btn"><i class="fas fa-book-open"></i> اقرأ الشرح الكامل</div>
+                </div>
+            </a>
+
+        </div>
+        
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="/ar/blog.html" class="btn" style="max-width: 300px; margin: 0 auto;">
+                <i class="fas fa-plus"></i> عرض كل المقالات الـ 100
+            </a>
         </div>
     </div>
 
     <footer>
         <div class="footer-logo">شاكر الكردي</div>
-        <p style="color: var(--text-gray); margin-bottom: 1rem;">منصة الثراء الرقمي الأولى عربياً</p>
+        <p style="color: var(--text-gray); margin-bottom: 1rem;">كل الشروحات مجربة 2026 | نحدث المقالات أسبوعياً</p>
         <p style="color: #64748b; font-size: 0.9rem;">جميع الحقوق محفوظة &copy; 2026</p>
     </footer>
 
+    <script>
+    function switchLang(lang) {
+        let path = window.location.pathname;
+        if (lang === 'en') {
+            if (path === '/' || path === '/index.html') window.location.href = '/en/';
+            else if (path.includes('/ar/')) window.location.href = path.replace('/ar/', '/en/');
+            else window.location.href = '/en' + path;
+        } else {
+            if (path === '/en/' || path === '/en/index.html') window.location.href = '/ar/';
+            else if (path.includes('/en/')) window.location.href = path.replace('/en/', '/ar/');
+            else window.location.href = '/ar' + path;
+        }
+    }
+    </script>
 </body>
 </html>
