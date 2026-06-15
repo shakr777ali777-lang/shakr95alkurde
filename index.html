@@ -2,465 +2,342 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- كود تحقق جوجل الجديد والمحدث -->
-    <meta name="google-site-verification" content="QeHrlPO6cc8F3N-Wrg69_Db53_t1N16dFG9HqXEvv5c" />
-    
-    <title>شاكر الكردي | منصة الثراء الرقمي</title>
-    
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>روابط الربح الخاصة بي</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --gold: #d4af37;
-            --gold-light: #f9d423;
-            --gold-dark: #9c7c1a;
-            --black-rich: #0a0a0a;
-            --black-soft: #111111;
-            --card-bg: #151515;
-            --text-white: #ffffff;
-            --text-gray: #b8b8b8;
-            --success: #00d26a;
-            --whatsapp-color: #25D366;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Tajawal', sans-serif; }
-        
-        body { 
-            background: var(--black-rich); 
-            color: var(--text-white); 
-            overflow-x: hidden;
-            background-image: 
-                radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.08) 0%, transparent 50%),
-                radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
-        }
-
-        /* تأثير الذهب المتساقط */
-        .gold-particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
+        html, body {
             height: 100%;
-            pointer-events: none;
-            z-index: 0;
         }
 
-        .gold-coin {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: radial-gradient(circle, var(--gold-light), var(--gold-dark));
-            border-radius: 50%;
-            box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
-            animation: goldFall linear infinite;
-            opacity: 0.7;
-        }
-
-        @keyframes goldFall {
-            0% { transform: translateY(-100px) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.7; }
-            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
-        }
-
-        .gold-coin:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 0s; }
-        .gold-coin:nth-child(2) { left: 30%; animation-duration: 10s; animation-delay: 2s; }
-        .gold-coin:nth-child(3) { left: 50%; animation-duration: 7s; animation-delay: 4s; }
-        .gold-coin:nth-child(4) { left: 70%; animation-duration: 9s; animation-delay: 1s; }
-        .gold-coin:nth-child(5) { left: 90%; animation-duration: 11s; animation-delay: 3s; }
-
-        /* الهيدر */
-        header {
-            padding: 5rem 1.5rem 4rem;
-            text-align: center;
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: linear-gradient(165deg, #6d28d9 0%, #4c1d95 35%, #1e3a8a 100%);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 20px;
             position: relative;
-            background: linear-gradient(180deg, rgba(10,10,10,0.95) 0%, rgba(10,10,10,0.7) 100%);
-            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-            z-index: 10;
+            overflow-x: hidden;
         }
 
-        .badge {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-            color: var(--black-rich);
-            padding: 0.5rem 1.5rem;
-            border-radius: 50px;
+        body::before,
+        body::after {
+            content: '';
+            position: fixed;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.5;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        body::before {
+            background: #a855f7;
+            top: -100px;
+            right: -80px;
+        }
+
+        body::after {
+            background: #3b82f6;
+            bottom: -100px;
+            left: -80px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 420px;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        header {
+            text-align: center;
+            margin: 24px 0 36px;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 16px;
+            background: linear-gradient(135deg, rgba(255,255,255,0.25), rgba(255,255,255,0.1));
+            border-radius: 24px;
+            display: grid;
+            place-items: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+
+        .avatar svg {
+            width: 38px;
+            height: 38px;
+            stroke: white;
+            stroke-width: 2;
+        }
+
+        h1 {
+            font-size: 28px;
             font-weight: 800;
-            font-size: 0.9rem;
-            margin-bottom: 1.5rem;
-            letter-spacing: 1px;
-        }
-
-        .premium-name {
-            font-size: clamp(3rem, 8vw, 5rem);
-            font-weight: 900;
-            background: linear-gradient(135deg, #f9d423 0%, #d4af37 25%, #f9d423 50%, #d4af37 75%, #f9d423 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: goldShine 3s linear infinite;
-            margin-bottom: 1rem;
-            text-shadow: 0 0 80px rgba(212, 175, 55, 0.3);
-        }
-
-        @keyframes goldShine {
-            to { background-position: 200% center; }
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.2);
         }
 
         .subtitle {
-            color: var(--text-gray);
-            font-size: 1.2rem;
+            font-size: 15px;
             font-weight: 500;
-            max-width: 600px;
-            margin: 0 auto;
-            line-height: 1.8;
+            opacity: 0.85;
+            color: #e0e7ff;
         }
 
-        .stats {
+        .links {
             display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-top: 3rem;
-            flex-wrap: wrap;
+            flex-direction: column;
+            gap: 14px;
         }
 
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 900;
-            color: var(--gold);
-            display: block;
-        }
-
-        .stat-label {
-            color: var(--text-gray);
-            font-size: 0.9rem;
-            margin-top: 0.5rem;
-        }
-
-        /* المحتوى */
-        .container {
-            max-width: 1300px;
-            margin: 4rem auto;
-            padding: 0 1.5rem;
-            position: relative;
-            z-index: 10;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 900;
-            margin-bottom: 1rem;
-            color: var(--text-white);
-        }
-
-        .section-title span {
-            color: var(--gold);
-        }
-
-        .section-desc {
-            text-align: center;
-            color: var(--text-gray);
-            margin-bottom: 3rem;
-            font-size: 1.1rem;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 24px;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 1px solid rgba(212, 175, 55, 0.15);
+        .link-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            background: #ffffff;
+            color: #1e1b4b;
             text-decoration: none;
-            display: block;
-            cursor: pointer;
+            padding: 18px 20px;
+            border-radius: 20px;
+            box-shadow: 
+                0 4px 6px rgba(0,0,0,0.07),
+                0 10px 20px rgba(0,0,0,0.12),
+                inset 0 1px 0 rgba(255,255,255,1);
+            transition: all 0.25s cubic-bezier(0.2, 0.8, 0.2, 1);
             position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.8);
         }
 
-        .card::before {
+        .link-btn::before {
             content: '';
             position: absolute;
             top: 0;
-            left: 0;
             right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, transparent, var(--gold), transparent);
-            transform: scaleX(0);
-            transition: transform 0.4s;
-        }
-
-        .card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .card:hover {
-            transform: translateY(-12px);
-            border-color: var(--gold);
-            box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
-        }
-
-        .card-image {
-            width: 100%;
-            height: 220px;
-            background-size: cover;
-            background-position: center;
-            position: relative;
-        }
-
-        .card-image::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
             left: 0;
-            right: 0;
-            height: 60%;
-            background: linear-gradient(180deg, transparent, var(--card-bg));
+            height: 50%;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent);
+            pointer-events: none;
         }
 
-        .card-content {
-            padding: 2rem;
-            position: relative;
+        .link-btn:active {
+            transform: scale(0.98);
         }
 
-        .card-tag {
-            display: inline-block;
-            background: rgba(212, 175, 55, 0.15);
-            color: var(--gold);
-            padding: 0.4rem 1rem;
-            border-radius: 8px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
+        .link-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 8px 12px rgba(0,0,0,0.1),
+                0 16px 30px rgba(0,0,0,0.15),
+                inset 0 1px 0 rgba(255,255,255,1);
         }
 
-        .card-tag-whatsapp {
-            background: rgba(37, 211, 102, 0.15);
-            color: var(--whatsapp-color);
-        }
-
-        .card-title {
-            font-size: 1.4rem;
-            font-weight: 800;
-            margin-bottom: 0.8rem;
-            color: var(--text-white);
-            line-height: 1.4;
-        }
-
-        .card-desc {
-            font-size: 0.95rem;
-            color: var(--text-gray);
-            margin-bottom: 1.5rem;
-            line-height: 1.6;
-        }
-
-        .card-subtext {
-            display: block;
-            font-size: 0.8rem;
-            color: #888888;
-            margin-top: -1rem;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-        }
-
-        .btn {
+        .btn-content {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            width: 100%;
-            padding: 1rem;
-            background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold) 100%);
-            color: var(--black-rich);
+            gap: 14px;
+            flex: 1;
+        }
+
+        .btn-icon-wrap {
+            width: 48px;
+            height: 48px;
             border-radius: 14px;
-            font-weight: 800;
-            text-decoration: none;
-            font-size: 1rem;
-            transition: all 0.3s;
-            border: none;
+            display: grid;
+            place-items: center;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, #ede9fe, #dbeafe);
         }
 
-        .btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+        .btn-icon-wrap svg {
+            width: 24px;
+            height: 24px;
         }
 
-        .btn-whatsapp {
-            background: linear-gradient(135deg, #128C7E 0%, var(--whatsapp-color) 100%);
+        .btn-text {
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .btn-arrow {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: #f5f3ff;
+            display: grid;
+            place-items: center;
+            color: #5b21b6;
+            flex-shrink: 0;
+            transition: all 0.25s;
+        }
+
+        .link-btn:hover .btn-arrow {
+            background: #5b21b6;
             color: white;
+            transform: translateX(-3px);
         }
 
-        .btn-whatsapp:hover {
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+        .btn-arrow svg {
+            width: 20px;
+            height: 20px;
+            stroke-width: 2.5;
         }
+
+        /* ألوان مختلفة لكل زر */
+        .link-btn:nth-child(1) .btn-icon-wrap { background: linear-gradient(135deg, #fef3c7, #fde68a); }
+        .link-btn:nth-child(1) .btn-icon-wrap svg { stroke: #d97706; fill: #d97706; }
+        
+        .link-btn:nth-child(2) .btn-icon-wrap { background: linear-gradient(135deg, #dcfce7, #bbf7d0); }
+        .link-btn:nth-child(2) .btn-icon-wrap svg { stroke: #16a34a; fill: #16a34a; }
+        
+        .link-btn:nth-child(3) .btn-icon-wrap { background: linear-gradient(135deg, #dbeafe, #bfdbfe); }
+        .link-btn:nth-child(3) .btn-icon-wrap svg { stroke: #2563eb; fill: #2563eb; }
+        
+        .link-btn:nth-child(4) .btn-icon-wrap { background: linear-gradient(135deg, #fae8ff, #f5d0fe); }
+        .link-btn:nth-child(4) .btn-icon-wrap svg { stroke: #c026d3; fill: #c026d3; }
 
         footer {
             text-align: center;
-            padding: 4rem 1.5rem;
-            margin-top: 5rem;
-            border-top: 1px solid rgba(212, 175, 55, 0.1);
-            background: var(--black-soft);
+            margin-top: 32px;
+            padding: 0 20px;
         }
 
-        .footer-logo {
-            font-size: 2rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, var(--gold-dark), var(--gold));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 1rem;
+        footer p {
+            font-size: 13px;
+            color: rgba(224, 231, 255, 0.7);
+            font-weight: 500;
         }
 
-        @media (max-width: 768px) {
-            .stats { gap: 2rem; }
-            .stat-number { font-size: 2rem; }
-            .grid { grid-template-columns: 1fr; }
+        @media (max-width: 380px) {
+            h1 { font-size: 24px; }
+            .btn-text { font-size: 16px; }
+            .link-btn { padding: 16px 18px; }
+            .btn-icon-wrap { width: 44px; height: 44px; }
         }
     </style>
 </head>
 <body>
-
-    <div class="gold-particles">
-        <div class="gold-coin"></div>
-        <div class="gold-coin"></div>
-        <div class="gold-coin"></div>
-        <div class="gold-coin"></div>
-        <div class="gold-coin"></div>
-    </div>
-
-    <header>
-        <div class="badge">
-            <i class="fas fa-crown"></i> منصة موثوقة 100%
-        </div>
-        <h1 class="premium-name">شــاكر الكــردي</h1>
-        <p class="subtitle">خبير الربح من الإنترنت | أساعدك تبني دخلك الرقمي وتصل للحرية المالية</p>
-        
-        <div class="stats">
-            <div class="stat-item">
-                <span class="stat-number">50K+</span>
-                <span class="stat-label">عميل راضي</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">$2M+</span>
-                <span class="stat-label">أرباح المتابعين</span>
-            </div>
-            <div class="stat-item">
-                <span class="stat-number">4.9★</span>
-                <span class="stat-label">تقييم الخدمات</span>
-            </div>
-        </div>
-    </header>
-
     <div class="container">
-        <h2 class="section-title">خدمات <span>الربح الحصري</span></h2>
-        <p class="section-desc">اختر الفرصة اللي تناسبك وابدأ رحلة الثراء اليوم</p>
-        
-        <div class="grid">
-            
-            <!-- رابط الـ 100$ الأول -->
-            <a href="https://os8.me/jwfWaF" class="card" target="_blank">
-                <div class="card-image" style="background-image: url('IMG_3253.jpeg');"></div>
-                <div class="card-content">
-                    <div class="card-tag">عرض محدود</div>
-                    <h2 class="card-title">اربح 100$ فوراً</h2>
-                    <p class="card-desc">طريقة مجربة ومضمونة. سحب فوري على PayPal خلال دقائق</p>
-                    <div class="btn">
-                        <i class="fas fa-rocket"></i>
-                        ابدأ الربح الآن
+        <header>
+            <div class="avatar">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.349m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 0 015.378 3h13.243a1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .414.336.75.75.75z"/>
+                </svg>
+            </div>
+            <h1>روابط الربح الخاصة بي</h1>
+            <p class="subtitle">اضغط على أي رابط للانتقال مباشرة</p>
+        </header>
+
+        <main class="links">
+            <!-- الزر الأول -->
+            <a href="https://os8.me/jwfWaF" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <div class="btn-content">
+                    <div class="btn-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </svg>
                     </div>
+                    <span class="btn-text">رابط ربح الـ100$ الأول</span>
+                </div>
+                <div class="btn-arrow">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+                    </svg>
                 </div>
             </a>
 
-            <!-- رابط الـ 100$ الثاني -->
-            <a href="https://os8.me/3MWHRz" class="card" target="_blank">
-                <div class="card-image" style="background-image: url('IMG_3273.jpeg');"></div>
-                <div class="card-content">
-                    <div class="card-tag">سريع</div>
-                    <h2 class="card-title">100$ في أقل من ساعة</h2>
-                    <p class="card-desc">استراتيجية حصرية ما تحتاج خبرة. فقط جوال وانترنت</p>
-                    <div class="btn">
-                        <i class="fas fa-bolt"></i>
-                        اضغط هنا للربح
+            <!-- الزر الثاني -->
+            <a href="https://os8.me/3MWHRz" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <div class="btn-content">
+                    <div class="btn-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                        </svg>
                     </div>
+                    <span class="btn-text">رابط ربح الـ100$ الثاني</span>
                 </div>
-            </a>
-            
-            <!-- رابط الواتساب -->
-            <a href="https://whatsapp.com/channel/0029VbChT0u0rGiI9fLBR11q" class="card" target="_blank">
-                <div class="card-image" style="background-image: url('IMG_3372.jpeg');"></div>
-                <div class="card-content">
-                    <div class="card-tag card-tag-whatsapp">قناة رسمية</div>
-                    <h2 class="card-title">رابط الواتساب</h2>
-                    <p class="card-desc">انضم إلى مجتمعنا الحصري على الواتساب لتلقي التحديثات والفرص أولاً بأول.</p>
-                    <span class="card-subtext">رح نزل كل شرح برامج ربح هون</span>
-                    <div class="btn btn-whatsapp">
-                        <i class="fab fa-whatsapp"></i>
-                        انضم للقناة الآن
-                    </div>
-                </div>
-            </a>
-            
-            <!-- تطبيق المشي -->
-            <a href="https://swcapp.com/i/shakralkurde" class="card" target="_blank">
-                <div class="card-image" style="background-image: url('IMG_3361.jpeg');"></div>
-                <div class="card-content">
-                    <div class="card-tag">الأكثر طلباً</div>
-                    <h2 class="card-title">الربح من المشي فقط</h2>
-                    <p class="card-desc">حول خطواتك اليومية إلى دولارات حقيقية. آلاف المستخدمين يسحبون شهرياً</p>
-                    <div class="btn">
-                        <i class="fas fa-download"></i>
-                        حمل التطبيق وابدأ الآن
-                    </div>
+                <div class="btn-arrow">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+                    </svg>
                 </div>
             </a>
 
-            <!-- تيمو -->
-            <a href="https://temu.to/k/epv72au60x4" class="card" target="_blank">
-                <div class="card-image" style="background-image: url('IMG_3288.jpeg');"></div>
-                <div class="card-content">
-                    <div class="card-tag">مجاني 100%</div>
-                    <h2 class="card-title">تيمو: منتجات بـ 0$</h2>
-                    <p class="card-desc">احصل على هدايا ومنتجات مجانية بدون دفع شحن. عرض خاص للمتابعين</p>
-                    <div class="btn">
-                        <i class="fas fa-gift"></i>
-                        تسوق الآن مجاناً
+            <!-- الزر الثالث -->
+            <a href="https://swcapp.com/i/shakralkurde" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <div class="btn-content">
+                    <div class="btn-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
+                        </svg>
                     </div>
+                    <span class="btn-text">ربح 200$ من المشي</span>
+                </div>
+                <div class="btn-arrow">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+                    </svg>
                 </div>
             </a>
 
-            <!-- استراتيجية 10$ -->
-            <a href="https://getblock.me/u/27348334" class="card" target="_blank">
-                <div class="card-image" style="background-image: url('IMG_3857.jpeg');"></div>
-                <div class="card-content">
-                    <div class="card-tag">فرصة جديدة</div>
-                    <h2 class="card-title">ربح 10$ يومياً</h2>
-                    <p class="card-desc">استراتيجية مميزة وحصرية لربح 10 دولارات يومياً بشكل مضمون وسريع.</p>
-                    <div class="btn">
-                        <i class="fas fa-dollar-sign"></i>
-                        اضغط هنا وابدأ الربح اليوم
+            <!-- الزر الرابع -->
+            <a href="https://getblock.me/u/27348334" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <div class="btn-content">
+                    <div class="btn-icon-wrap">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
                     </div>
+                    <span class="btn-text">10$ يومياً</span>
+                </div>
+                <div class="btn-arrow">
+                    <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5"/>
+                    </svg>
                 </div>
             </a>
+        </main>
 
-        </div>
+        <footer>
+            <p>جميع الروابط تعمل مباشرة عند الضغط</p>
+        </footer>
     </div>
 
-    <footer>
-        <div class="footer-logo">شاكر الكردي</div>
-        <p style="color: var(--text-gray); margin-bottom: 1rem;">منصة الثراء الرقمي الأولى عربياً</p>
-        <p style="color: #64748b; font-size: 0.9rem;">جميع الحقوق محفوظة &copy; 2026</p>
-    </footer>
-
+    <script>
+        // تأثير اهتزاز بسيط عند الضغط للموبايل
+        document.querySelectorAll('.link-btn').forEach(btn => {
+            btn.addEventListener('touchstart', () => {
+                if (navigator.vibrate) navigator.vibrate(10);
+            });
+        });
+    </script>
 </body>
 </html>
